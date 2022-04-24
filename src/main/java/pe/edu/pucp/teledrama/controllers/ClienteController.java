@@ -10,7 +10,12 @@ public class ClienteController {
 
     @GetMapping("")
     public String home() {
-        return "cliente/home";
+        return "/cliente/home";
+    }
+
+    @GetMapping("/administrador")
+    public String homeAdmin() {
+        return "/administrador/main";
     }
 
 }
