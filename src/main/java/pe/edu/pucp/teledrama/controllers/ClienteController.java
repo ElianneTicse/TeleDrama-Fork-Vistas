@@ -8,9 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("")
 public class ClienteController {
 
-    @GetMapping("")
-    public String home() {
-        return "/cliente/home";
+    @GetMapping(value={"", "/"})
+    public String home2() {
+        return "news-single";
+    }
+
+    @GetMapping(value={"/ga"})
+    public String home3() {
+        return "/operador/dashboard";
     }
 
     @GetMapping("/administrador")
