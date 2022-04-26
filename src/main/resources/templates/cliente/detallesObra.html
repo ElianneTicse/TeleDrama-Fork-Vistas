@@ -528,6 +528,137 @@
                 </div>
             </footer>
 
+            <div class="modal fade" id="ventanaModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">Escoge un horario y sede</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="img-fluid" th:src="@{images/projects/project1.jpg}" alt="project-img">
+                                    <div class="col mt-2">
+                                        <select class="form-select border-0 py-3">
+                                            <option selected="">Fechas próximas</option>
+                                            <option value="1">Fecha 1</option>
+                                            <option value="2">Fecha 2</option>
+                                            <option value="3">Fecha 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col mt-2">
+                                        <select class="form-select border-0 py-3">
+                                            <option selected="">Teatro</option>
+                                            <option value="1">Teatro 1</option>
+                                            <option value="2">Teatro 2</option>
+                                            <option value="3">Teatro 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="accordion accordion-group accordion-classic" id="construction-accordion">
+                                        <div class="card">
+                                            <div class="card-header p-0 bg-transparent" id="headingOne">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        Teatro 1
+                                                    </button>
+                                                </h2>
+                                            </div>
+
+                                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#construction-accordion" style="">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#tickets">10:45</button>
+                                                    <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#tickets">14:45</button>
+                                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tickets">18:30</button>
+                                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tickets">22:40</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header p-0 bg-transparent" id="headingTwo">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        Teatro 2
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#construction-accordion" style="">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#tickets">10:45</button>
+                                                    <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#tickets">14:45</button>
+                                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tickets">18:30</button>
+                                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tickets">22:40</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-header p-0 bg-transparent" id="headingThree">
+                                                <h2 class="mb-0">
+                                                    <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        Teatro 3
+                                                    </button>
+                                                </h2>
+                                            </div>
+                                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#construction-accordion" style="">
+                                                <div class="card-body">
+                                                    <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#tickets">10:45</button>
+                                                    <button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#tickets">14:45</button>
+                                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tickets">18:30</button>
+                                                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tickets">22:40</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="tickets" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitles">Escoge cantidad de tickets</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <img class="img-fluid" th:src="@{images/projects/project1.jpg}" alt="project-img">
+                                    <h6 class="mt-3">Obra: Mamma Mia</h6>
+                                    <h6>Teatro: Teatro 1</h6>
+                                    <h6>Fecha: 17 de abril</h6>
+                                    <h6>Hora: 14:45 p.m</h6>
+                                </div>
+                                <div class="col-6">
+                                    <h6>Stock: 2</h6>
+                                    <h6>Cantidad de tickets</h6>
+                                    <div class="text-center">
+                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                class="minus ">-</button>
+                                        <input class="quantity text-center" min="1" max="6"
+                                               name="cant" readonly
+                                               value="5"
+                                               type="number">
+                                        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                class="plus">+</button>
+                                    </div>
+                                    <a th:href="@{carrito}" type="button" class="btn btn-primary mt-4">Añadir a carrito</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Javascript Files
             ================================================== -->
 
@@ -611,6 +742,9 @@
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
                     crossorigin="anonymous"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 
         </div><!-- Body inner end -->
     </body>
