@@ -59,6 +59,6 @@ public class ClienteController {
 
     @GetMapping("/index")
     public String homeCliente() {
-        return "cliente/index";
+        return "cliente/PaginaPrincipal";
     }
 }
