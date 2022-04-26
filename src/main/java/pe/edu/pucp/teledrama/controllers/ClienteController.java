@@ -61,4 +61,10 @@ public class ClienteController {
     public String obra() {
         return "obras";
     }
+
+    @GetMapping("carrito")
+    public String carrito(){
+        return "cliente/carritodecompras";
+    }
+
 }
