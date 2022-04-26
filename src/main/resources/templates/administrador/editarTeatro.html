@@ -149,10 +149,18 @@
                             </div>
 
                             <div class="mb-3 mt-3 row">
+                                <label  class="form-label">Horarios de atención: </label>
                                 <div class="col">
-                                    <label for="schedule" class="form-label">Horarios de atención: </label>
-                                    <label for="schedule" class="form-label">Lunes - Viernes: </label>
-                                    <label for="schedule" class="form-label">Sábados y Domingos: </label>
+                                    <div class="col-md-10 col-12">
+                                        <label class="form-label ml-5">Lunes - Viernes: </label>
+                                    </div>
+                                    <div class="col-md-10 col-12">
+                                        <label  class="form-label ml-5">Sábados y Domingos: </label>
+                                    </div>
+
+                                    <!--                                            <p>-->
+                                    <!--                                                <label for="schedule" class="form-label">Sábados y Domingos: </label>-->
+                                    <!--                                            </p>-->
                                 </div>
                                 <div class="col">
                                     <b></b>
@@ -163,9 +171,6 @@
                                         <input type="datetime-local" class="form-control bg-white">
                                     </div>
                                 </div>
-
-<!--                                <input type="text" id="schedule" class="form-control disabled">-->
-
                             </div>
 
 
@@ -187,8 +192,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer justify-content-center">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-primary">Crear</button>
+                                <a th:href="@{#}" type="button" class="btn btn-primary">Cancelar</a>
+                                <a th:href="@{teatrosAdmi}" type="button" class="btn btn-primary">ACTUALIZAR</a>
                             </div>
                         </form>
                     </div>
