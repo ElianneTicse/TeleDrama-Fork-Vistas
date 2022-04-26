@@ -116,8 +116,6 @@ jQuery(function ($) {
 			});
 		}
 		backToTop();
-
-
 		// banner-carousel
 		function bannerCarouselOne() {
 			$('.banner-carousel.banner-carousel-1').slick({

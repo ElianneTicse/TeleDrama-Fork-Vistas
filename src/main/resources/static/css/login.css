@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+body{
+    background-image: url("https://images.pexels.com/photos/45258/ballet-production-performance-don-quixote-45258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.pt-4 {
+    margin-top: 4rem !important;
+}
+.bg-white{
+    background-color: rgba(18, 31, 58, 0.13);
+}
+button.btn-primary {
+    background-color: #FFCC00 !important;
+    border: none;
+}
+
+.color-bk{
+    color: #333;
+}
+.transparent{
+    background-color: transparent;
+}
+
+

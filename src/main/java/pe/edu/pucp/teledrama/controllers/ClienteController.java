@@ -5,17 +5,28 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/")
 public class ClienteController {
     @GetMapping("detalle")
     public String hom1() {
         return "/cliente/detallestickets";
     }
 
-    @GetMapping("vigente")
+    @GetMapping("/login")
+    public String home() {
+        return "/cliente/login/login";}
+
+    @GetMapping(value={"", "/"})
     public String home1() {
+        return "news-single";}
+
+    @GetMapping("vigente")
+    public String home2() {
         return "/cliente/detalledecompras2";
     }
+    @GetMapping(value={"/ga"})
+    public String home3() {
+        return "/operador/dashboard";}
 
     @GetMapping("cancelado")
     public String home2detalle() {
@@ -26,10 +37,21 @@ public class ClienteController {
     public String homedetalle() {
         return "/cliente/detalledecompra4";
     }
-
-    @GetMapping("/administrador")
-    public String homeAdmin() {
-        return "/administrador/main";
+    @GetMapping("/register")
+    public String home5() {
+        return "/cliente/login/register";
+    }
+    @GetMapping("/contraseña")
+    public String password1() {
+        return "/cliente/login/contraseña1";
+    }
+    @GetMapping("/contraseñaNew")
+    public String password() {
+        return "/cliente/login/recuperar_contraseña";
+    }
+    @GetMapping("/home")
+    public String home6() {
+        return "/cliente/home";
     }
 
     @GetMapping("/elenco")

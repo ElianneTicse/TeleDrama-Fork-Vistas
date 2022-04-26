@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <!-- CSS
+    ================================================== -->
+        <!-- Bootstrap -->
+        <link rel="stylesheet" th:href="@{plugins/bootstrap/bootstrap.min.css}">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" th:href="@{plugins/fontawesome/css/all.min.css}">
+        <!-- Animation -->
+        <link rel="stylesheet" th:href="@{plugins/animate-css/animate.css}">
+        <!-- slick Carousel -->
+        <link rel="stylesheet" th:href="@{plugins/slick/slick.css}">
+        <link rel="stylesheet" th:href="@{plugins/slick/slick-theme.css}">
+        <!-- Colorbox -->
+        <link rel="stylesheet" th:href="@{plugins/colorbox/colorbox.css}">
+        <!-- Template styles-->
+        <link rel="stylesheet" th:href="@{css/login.css}">
+    </head>
+    <body>
+        <div class="container pt-4">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title p-2 text-center">Recupera tu contraseña</h5>
+                                <p>¡Crea una nueva contraseña!</p>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Contraseña:</label>
+                                    <input type="password" class="form-control" id="exampleFormControlInput1">
+                                </div>
+                                <a style="color: green">5 caracteres como mínimo. Incluye mayusculas, minúsculas, números y un carácter especial.</a>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Repite la contraseña:</label>
+                                    <input type="password" class="form-control" id="exampleFormControlInput2">
+                                </div>
+                                <a type="submit" class="btn btn-warning btn-block btn-large" style="color: white" th:href="@{/login}">Solicitar</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap jQuery -->
+        <script th:src="@{plugins/bootstrap/bootstrap.min.js}" defer></script>
+        <!-- Template custom -->
+        <script th:src="@{js/script.js}"></script>
+    </body>
+</html>
