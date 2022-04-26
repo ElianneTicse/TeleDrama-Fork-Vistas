@@ -108,6 +108,11 @@ public class ClienteController {
         return "administrador/teatro";
     }
 
+//    @GetMapping("/teatro")
+//    public String homeTeatro() {
+//        return "/administrador/teatro";
+//    }
+
     @GetMapping("salasTD")
     public String salasTeatro(){return "administrador/salas";}
     @GetMapping("salaX")
@@ -137,10 +142,7 @@ public class ClienteController {
         return "/administrador/elenco";
     }
 
-    @GetMapping("/teatro")
-    public String homeTeatro() {
-        return "/administrador/teatro";
-    }
+
 
     @GetMapping("/teatroMaps")
     public String homeTeatroMaps() {

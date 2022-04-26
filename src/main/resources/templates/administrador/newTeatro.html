@@ -77,7 +77,31 @@
         <div class="body-inner">
             <!--Navbar-->
             <header th:replace="fragments/navbarGeneral.html :: navbarAdmi"></header>
-            <!-- Table-->
+
+            <div id="banner-area" class="banner-area" th:style="'background-image:url('+@{/images/banner/banner1.jpg}+')'">
+                <div class="banner-text">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="banner-heading">
+                                    <h1 class="banner-title">Crear nuevo Teatro</h1>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb justify-content-center">
+                                            <li class="breadcrumb-item active" aria-current="page">Teledrmas </li>
+                                            <li class="breadcrumb-item active" aria-current="page">Teatro TOP </li>
+
+
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div><!-- Col end -->
+                        </div><!-- Row end -->
+                    </div><!-- Container end -->
+                </div><!-- Banner text end -->
+            </div><!-- Banner area end -->
+
+
+
             <div class="container centrado">
                 <div class="row">
                     <div class="table-responsive">
@@ -174,10 +198,7 @@
                 </div>
             </div>
 
-            <!-- Button trigger modal -->
-            <a type="button" class="btn-flotante border-0" style="font-size: 2rem" th:href="@{/nuevoOperador}">
-                <i class="bi bi-plus-circle"></i>
-            </a>
+
 
             <footer id="footer" class="footer bg-overlay">
                 <div class="footer-main">

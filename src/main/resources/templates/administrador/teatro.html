@@ -72,6 +72,7 @@
                 }
             }
         </style>
+
     </head>
     <body>
         <div class="body-inner">
@@ -359,11 +360,7 @@
                 </div>
             </section>
 
-            <!--Boton Crear Obra-->
-            <a type="button" class="btn-flotante border-0 p-3" style="font-size: 2rem"
-               href="#">
-                <i class="bi bi-plus-circle-fill text-white"></i>
-            </a>
+
 
             <!--Modal ver detalles teatro-->
             <div class="modal" id="ventanaModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
@@ -425,6 +422,11 @@
                 </div>
             </div>
 
+
+            <!-- Boton flotante para Crear Teatros -->
+            <a type="button" class="btn-flotante border-0 p-3" style="font-size: 2rem" th:href="@{crearTeatro}">
+                <i class="bi bi-plus-circle-fill text-white"></i>
+            </a>
 
             <!-- Javascript Files
             ================================================== -->
