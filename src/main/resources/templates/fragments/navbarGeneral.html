@@ -154,6 +154,10 @@
                                         <a th:href="@{/obrasList}" class="nav-link">Obras</a></li>
                                     <li th:class="|nav-item ${opcion eq 'carrito' || opcion eq '' ? 'active' : ''}|">
                                         <a th:href="@{/carrito}" class="nav-link">Carrito de compras</a></li>
+                                    <li th:class="|nav-item ${opcion eq 'historial' || opcion eq '' ? 'active' : ''}|">
+                                        <a th:href="@{/historial}" class="nav-link">Historial de compras</a></li>
+                                    <li th:class="|nav-item ${opcion eq 'editar' || opcion eq '' ? 'active' : ''}|">
+                                        <a th:href="@{/editarPerfil}" class="nav-link">Editar Perfil</a></li>
 
                                 </ul>
                             </div>

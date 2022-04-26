@@ -2713,11 +2713,11 @@ img.testimonial-thumb {
 .breadcrumb .breadcrumb-item,
 .breadcrumb li a:focus,
 .breadcrumb li a:hover {
-  color: #fff !important;
+  color: rgba(13, 13, 13, 0.94) !important;
 }
 
 .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-  color: #fff;
+  color: rgba(13, 13, 13, 0.37);
 }
 
 /*-- About us page --*/
