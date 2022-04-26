@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("")
 public class ClienteController {
     @GetMapping("detalle")
     public String hom1() {
@@ -74,19 +74,32 @@ public class ClienteController {
         return "cliente/PaginaPrincipal";
     }
 
+    @GetMapping("carrito")
+    public String carrito(){
+        return "cliente/carritodecompras";
+    }
+
+
+    // Operador (No funciona en el operador controller :'( )
+
     @GetMapping("dashboard")
     public String dashboard() {
         return "operador/dashboard";
     }
 
-    @GetMapping("obra")
-    public String obra() {
-        return "obras";
+    @GetMapping("obras")
+    public String obras() {
+        return "operador/obras";
     }
 
-    @GetMapping("carrito")
-    public String carrito(){
-        return "cliente/carritodecompras";
+    @GetMapping("detalleobra")
+    public String obraDetalle() {
+        return "operador/obraDetalles";
+    }
+
+    @GetMapping("teatros")
+    public String teatros() {
+        return "operador/teatros";
     }
 
 }
