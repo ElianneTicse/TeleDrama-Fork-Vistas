@@ -45,7 +45,7 @@
         </div>
     </header>
 
-    <header th:fragment="navbarCLienteSL" class="header-one"> <!--No borrar la clase 'header-one'-->
+    <header th:fragment="navbarCLienteSL(opcion)" class="header-one"> <!--No borrar la clase 'header-one'-->
         <div class="site-navigation">
             <div class="container">
                 <div class="row">
@@ -59,12 +59,12 @@
 
                             <div class="collapse navbar-collapse">
                                 <ul class="nav navbar-nav mr-auto">
-                                    <li class="nav-item">
-                                        <a th:href="@{/index}" class="nav-link">Teatros</a></li>
+                                    <li th:class="|nav-item ${opcion eq 'teatros' || opcion eq '' ? 'active' : ''}|">
+                                        <a th:href="@{/Teatros}" class="nav-link">Teatros</a></li>
                                     </li>
-                                    <li th:class="nav-item">
+                                    <li th:class="|nav-item ${opcion eq 'obras' || opcion eq '' ? 'active' : ''}|">
                                         <a th:href="@{/obrasList}" class="nav-link">Obras</a></li>
-                                    <li th:class="nav-item">
+                                    <li th:class="|nav-item ${opcion eq 'carrito' || opcion eq '' ? 'active' : ''}|">
                                         <a th:href="@{/carrito}" class="nav-link">Carrito de compras</a></li>
                                 </ul>
                             </div>
@@ -133,7 +133,7 @@
         </div>
     </header>
 
-    <header th:fragment="navbarCLienteL" class="header-one"> <!--No borrar la clase 'header-one'-->
+    <header th:fragment="navbarCLienteL(opcion)" class="header-one"> <!--No borrar la clase 'header-one'-->
         <div class="site-navigation">
             <div class="container">
                 <div class="row">
@@ -147,17 +147,13 @@
 
                             <div class="collapse navbar-collapse">
                                 <ul class="nav navbar-nav mr-auto">
-                                    <li class="nav-item dropdown active">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Teatros</a>
+                                    <li th:class="|nav-item ${opcion eq 'teatros' || opcion eq '' ? 'active' : ''}|">
+                                        <a th:href="@{/Teatros}" class="nav-link">Teatros</a></li>
                                     </li>
-
-                                    <li th:class="|nav-item ${opcion eq 'obras' ? 'active' : ''}|">
+                                    <li th:class="|nav-item ${opcion eq 'obras' || opcion eq '' ? 'active' : ''}|">
                                         <a th:href="@{/obrasList}" class="nav-link">Obras</a></li>
-
-                                    <li class="nav-item dropdown">
-                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Carrito de compras</a>
-                                    </li>
-
+                                    <li th:class="|nav-item ${opcion eq 'carrito' || opcion eq '' ? 'active' : ''}|">
+                                        <a th:href="@{/carrito}" class="nav-link">Carrito de compras</a></li>
 
                                 </ul>
                             </div>

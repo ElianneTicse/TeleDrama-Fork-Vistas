@@ -94,7 +94,7 @@
 
     </head>
     <body>
-        <header th:replace="fragments/navbarGeneral.html :: navbarCLienteSL"></header>
+        <header th:replace="fragments/navbarGeneral.html :: navbarCLienteSL('carrito')"></header>
         <div class="stepwizard">
             <div class="stepwizard-row setup-panel ">
                 <div class="stepwizard-step">
@@ -111,7 +111,7 @@
             <div class="col-8">
 
             </div>
-            <div class="col-4 text-center"><button class="btn btn-primary mt-4">Seguir Comprando</button></div>
+            <div class="col-4 text-center"><a type="button" class="btn btn-primary mt-4" th:href="@{index}">Seguir Comprando</a></div>
         </div>
 
         <div class="row mt-5">
@@ -365,7 +365,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary">Finalizar compra</button>
+                        <a th:href="@{descargaQR}" type="button" class="btn btn-primary">Finalizar compra</a>
                     </div>
                 </div>
             </div>

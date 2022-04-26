@@ -76,7 +76,7 @@
     <body>
         <div class="body-inner">
             <!--Navbar-->
-            <header th:replace="fragments/navbarGeneral.html :: navbarCLienteSL"></header>
+            <header th:replace="fragments/navbarGeneral.html :: navbarCLienteSL('teatros')"></header>
 
             <!--Banner-->
             <div th:replace="fragments/general.html :: banner(bg = |background-image:url(@{/images/banner/banner1.jpg})|,
