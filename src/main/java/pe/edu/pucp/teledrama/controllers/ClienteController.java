@@ -80,7 +80,7 @@ public class ClienteController {
     }
     @GetMapping("obrasList")
     public String listadeobras(){
-        return "/listadeobras";
+        return "cliente/listadeobras";
     }
 
 
@@ -105,5 +105,11 @@ public class ClienteController {
     public String teatros() {
         return "operador/teatros";
     }
+
+    @GetMapping("teatrosAdmi")
+    public String teatrosAdmi(){
+        return "administrador/teatro";
+    }
+
 
 }
