@@ -130,6 +130,9 @@ public class ClienteController {
     @GetMapping("operadores")
     public String operadores(){return "administrador/operadores";}
 
+    @GetMapping("clientes")
+    public String clientes(){return "administrador/clientes";}
+
     @GetMapping("nuevoOperador")
     public String newOperador(){return "administrador/newOperador";}
 
