@@ -77,6 +77,8 @@
         <div class="body-inner">
             <!--Navbar-->
             <header th:replace="fragments/navbarGeneral.html :: navbarAdmi"></header>
+
+
             <div class="banner-carousel banner-carousel-1 mb-0">
                 <div class="banner-carousel-item"
                      style="background-image:url(https://www.dondeir.com/wp-content/uploads/2018/01/6-obras-teatro-en-enero-2018-inicia-actitud-07.jpg)">
@@ -87,7 +89,42 @@
                     </div>
                 </div>
             </div>
-            <!-- Table-->
+
+
+
+            <!--    Esto es el nav de REGRESAR-->
+            <section class="call-to-action-box no-padding">
+                <div class="container">
+                    <div class="action-style-box">
+                        <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+
+
+<!--                            <div class="col-md-3 col-12 my-1 ">-->
+<!--                                <div class="input-group ">-->
+<!--                                    <input type="search" class="form-control bg-white" placeholder="Nombre, correo ... " aria-label="Search" aria-describedby="search-addon" />-->
+<!--                                    <span class="input-group-text border-0 " id="search-addon">-->
+<!--                                <i class="fas fa-search"></i>-->
+<!--                            </span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+                            <div class="d-grid gap-2 d-md-block justify-content-md-end">
+
+                                <a th:href="@{/salasTD}" class="btn btn-dark " type="button" >Regresar</a>
+
+                            </div>
+
+
+
+                        </div>
+                    </div><!-- Action style box -->
+                </div><!-- Container end -->
+            </section><!-- Action end -->
+
+
+
+
+
             <div class="container">
                 <div class="row">
                     <div class="table-responsive">
