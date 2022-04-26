@@ -78,6 +78,10 @@ public class ClienteController {
     public String carrito(){
         return "cliente/carritodecompras";
     }
+    @GetMapping("obrasList")
+    public String listadeobras(){
+        return "/listadeobras";
+    }
 
 
     // Operador (No funciona en el operador controller :'( )
