@@ -7,11 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("")
 public class ClienteController {
-    @GetMapping(value={"", "/"})
-    public String home2() {
-        return "news-single";
-    }
-
     @GetMapping("detalle")
     public String hom1() {
         return "/cliente/detallestickets";
@@ -52,13 +47,18 @@ public class ClienteController {
         return "/administrador/teatroMaps";
     }
 
-    @GetMapping("/aaaa")
-    public String obras() {
-        return "obras";
-    }
-
     @GetMapping("/index")
     public String homeCliente() {
         return "cliente/PaginaPrincipal";
+    }
+
+    @GetMapping("dashboard")
+    public String dashboard() {
+        return "operador/dashboard";
+    }
+
+    @GetMapping("obra")
+    public String obra() {
+        return "obras";
     }
 }
