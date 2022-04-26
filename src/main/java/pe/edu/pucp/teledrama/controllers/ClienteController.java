@@ -12,9 +12,24 @@ public class ClienteController {
         return "news-single";
     }
 
-    @GetMapping(value={"/ga"})
-    public String home3() {
-        return "/operador/dashboard";
+    @GetMapping("detalle")
+    public String hom1() {
+        return "/cliente/detallestickets";
+    }
+
+    @GetMapping("vigente")
+    public String home1() {
+        return "/cliente/detalledecompras2";
+    }
+
+    @GetMapping("cancelado")
+    public String home2detalle() {
+        return "/cliente/detalledecompra3";
+    }
+
+    @GetMapping("asistido")
+    public String homedetalle() {
+        return "/cliente/detalledecompra4";
     }
 
     @GetMapping("/administrador")

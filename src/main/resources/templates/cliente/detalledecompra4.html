@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Basic Page Needs
+  ================================================== -->
+        <meta charset="utf-8">
+        <title>Eleco Teledrama</title>
+
+        <!-- Mobile Specific Metas
+      ================================================== -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Construction Html5 Template">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+        <!-- Favicon
+      ================================================== -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
+        <!-- CSS
+      ================================================== -->
+        <!-- Bootstrap -->
+        <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+              crossorigin="anonymous">
+
+        <!--    Para los iconos-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <!--    <link rel="stylesheet" th:href="@{/plugins/bootstrap/bootstrap.min.css}">-->
+        <!-- FontAwesome -->
+        <link rel="stylesheet" th:href="@{/plugins/fontawesome/css/all.min.css}">
+        <!-- Animation -->
+        <link rel="stylesheet" th:href="@{/plugins/animate-css/animate.css}">
+        <!-- slick Carousel -->
+        <link rel="stylesheet" th:href="@{/plugins/slick/slick.css}">
+        <link rel="stylesheet" th:href="@{/plugins/slick/slick-theme.css}">
+        <!-- Colorbox -->
+        <link rel="stylesheet" th:href="@{/plugins/colorbox/colorbox.css}">
+        <!-- Template styles-->
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+    </head>
+    <body>
+        <div class="container text-center">
+            <h2 >Mamma Mia</h2>
+            <div><img class="img-fluid" th:src="@{/images/qrcode1.png}"></div>
+            <h4>Teatro 1</h4>
+            <p>16/04/2022 | 19:30 pm | 160 min | Sala 3</p>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" >
+                <a type="button" th:href="@{/detalle}" class="btn btn-outline-primary" for="btnradio1">Detalle</a>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked>
+                <a type="button" th:href="@{/asistido}" class="btn btn-outline-primary" for="btnradio3">Compra</a>
+
+            </div>
+            <div class="col-12">
+                <div class="card mt-4">
+                    <div class="row mt-3">
+                        <div class="col-4">
+                            <i class="bi bi-bell"></i>
+                            <a><strong>Estado de compra</strong></a>
+                        </div>
+                        <div class="col-4"></div>
+                        <div class="col-2 border border-dark position-relative">
+                            <p>Asistido</p>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7"></div>
+                        <div class="col-4">
+                            <p>Último cambio: 12/03/2022 14:54 pm</p>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-4 mb-3">
+                            <i class="bi bi-ticket-detailed-fill"></i>
+                            <a><strong>Entradas</strong></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col ">
+                            <div class="row">
+                                <div class="col-5"></div>
+                                <div class="col-3">
+                                    <img class="img-fluid" th:src="@{/images/img.png}" style="width: 80px;height: 80px;">
+                                </div>
+                                <div class="col-3">Mamma Mia<br>S/. 16.00
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col ">
+                            <p>2 tickets</p>
+                        </div>
+                        <div class="col ">
+                            <p>S/. 32.00</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 mt-3 mb-3">
+                            <i class="bi bi-cart-check"></i>
+                            <a><strong>Fecha de compra</strong></a>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-5">
+                            <i class="bi bi-calendar2-check"></i>
+                            <a>12/03/2022  &nbsp&nbsp&nbsp&nbsp14:25 pm</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 mt-3 mb-3">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <a type="button" data-bs-toggle="modal" data-bs-target="#ventanaModal"><strong>Calificar</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="ventanaModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">Calificar el Elenco</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <p>Obra:</p>
+                            <div class="row">
+                                <div class="col"><p>Mamma Mia</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Mammamia"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Mammamia"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Mammamia"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Mammamia"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Mammamia"></span>
+                                </div>
+                            </div>
+                            <p>Director:</p>
+                            <div class="row">
+                                <div class="col"><p>Jhon Lennon</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Jhon1"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Jhon1"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Jhon1"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Jhon1"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Jhon1"></span>
+                                </div>
+                            </div>
+                            <p>Actores:</p>
+                            <div class="row">
+                                <div class="col"><p>Jhon Lennon</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Jhon2"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Jhon2"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Jhon2"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Jhon2"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Jhon2"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><p>Jhon Lennon</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Jhon3"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Jhon3"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Jhon3"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Jhon3"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Jhon3"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><p>Jhon Lennon</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Jhon4"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Jhon4"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Jhon4"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Jhon4"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Jhon4"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><p>Jhon Lennon</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Jhon5"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Jhon5"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Jhon5"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Jhon5"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Jhon5"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><p>Jhon Lennon</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Jhon6"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Jhon6"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Jhon6"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Jhon6"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Jhon6"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><p>Jhon Lennon</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Jhon7"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Jhon7"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Jhon7"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Jhon7"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Jhon7"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><p>Jhon Lennon</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Jhon8"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Jhon8"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Jhon8"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Jhon8"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Jhon8"></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col"><p>Jhon Lennon</p></div>
+                                <div class="col">
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="1Jhon9"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="2Jhon9"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="3Jhon9"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="4Jhon9"></span>
+                                    <span class="fa fa-star" onclick="calificar(this)" style="cursor: pointer;" id="5Jhon9"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <script>
+            var contador;
+            function calificar(item){
+                console.log(item);
+                contador=item.id[0];
+                let nombre=item.id.substring(1);
+                for(let i=0;i<5;i++){
+                    if(i<contador){
+                        document.getElementById((i+1)+nombre).style.color="orange";
+
+                    }else{
+                        document.getElementById((i+1)+nombre).style.color="black";
+                    }
+                }
+            }
+        </script>
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+</html>
