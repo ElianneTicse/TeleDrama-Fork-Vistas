@@ -132,6 +132,11 @@ public class ClienteController {
         return "administrador/newTeatro";
     }
 
+    @GetMapping("editarTeatro")
+    public String editarTeatro(){
+        return "administrador/editarTeatro";
+    }
+
     @GetMapping("buscadorPrincipal")
     public String buscador(){
         return "cliente/buscadorPrincipal";
