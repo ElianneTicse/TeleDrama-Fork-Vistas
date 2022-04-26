@@ -128,4 +128,9 @@ public class ClienteController {
         return "cliente/editPerfil";
     }
 
+    @GetMapping("Teatros")
+    public String teatrosCliente(){
+        return "cliente/teatros";
+    }
+
 }
