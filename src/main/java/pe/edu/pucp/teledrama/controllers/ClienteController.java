@@ -23,4 +23,14 @@ public class ClienteController {
         return "/administrador/main";
     }
 
+    @GetMapping("/aaaa")
+    public String obras() {
+        return "obras";
+    }
+
+    @GetMapping("/index")
+    public String homeCliente() {
+        return "cliente/index";
+    }
+
 }
