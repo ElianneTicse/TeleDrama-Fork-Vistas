@@ -113,4 +113,19 @@ public class ClienteController {
     }
 
 
+    @GetMapping("buscadorPrincipal")
+    public String buscador(){
+        return "cliente/buscadorPrincipal";
+    }
+
+    @GetMapping("crearPerfil")
+    public String crearPerfil(){
+        return "cliente/crearPerfil";
+    }
+
+    @GetMapping("editarPerfil")
+    public String editarPerfil(){
+        return "cliente/editPerfil";
+    }
+
 }
