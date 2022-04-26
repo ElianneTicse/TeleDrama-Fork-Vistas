@@ -54,20 +54,6 @@ public class ClienteController {
         return "/cliente/home";
     }
 
-    @GetMapping("/elenco")
-    public String homeElenco() {
-        return "/administrador/elenco";
-    }
-
-    @GetMapping("/teatro")
-    public String homeTeatro() {
-        return "/administrador/teatro";
-    }
-
-    @GetMapping("/teatroMaps")
-    public String homeTeatroMaps() {
-        return "/administrador/teatroMaps";
-    }
 
     @GetMapping("/index")
     public String homeCliente() {
@@ -141,11 +127,37 @@ public class ClienteController {
         return "administrador/newTeatro";
     }
 
-
     @GetMapping("buscadorPrincipal")
     public String buscador(){
         return "cliente/buscadorPrincipal";
     }
+
+    @GetMapping("/elenco")
+    public String homeElenco() {
+        return "/administrador/elenco";
+    }
+
+    @GetMapping("/teatro")
+    public String homeTeatro() {
+        return "/administrador/teatro";
+    }
+
+    @GetMapping("/teatroMaps")
+    public String homeTeatroMaps() {
+        return "/administrador/teatroMaps";
+    }
+
+    @GetMapping("/nuevoElenco")
+    public String nuevoElenco() {
+        return "/administrador/nuevoElenco";
+    }
+
+    @GetMapping("/editarElenco")
+    public String editarElenco() {
+        return "/administrador/editarElenco";
+    }
+
+
 
     @GetMapping("crearPerfil")
     public String crearPerfil(){
