@@ -39,9 +39,10 @@
         <link rel="stylesheet" th:href="@{/plugins/colorbox/colorbox.css}">
         <!-- Template styles-->
         <link rel="stylesheet" th:href="@{/css/style.css}">
-        <div th:insert="fragments/navbarGeneral.html :: navbar"></div>
+
     </head>
     <body>
+        <header th:replace="fragments/navbarGeneral.html :: navbarCLienteL"></header>
         <div class="container text-center">
             <h2 >Mamma Mia</h2>
             <div><img class="img-fluid" th:src="@{/images/qrcode1.png}"></div>
