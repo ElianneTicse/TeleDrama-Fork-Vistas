@@ -81,12 +81,16 @@ public class ClienteController {
 
     @GetMapping("obra")
     public String obra() {
-        return "obras";
+        return "/obras";
     }
 
     @GetMapping("carrito")
     public String carrito(){
         return "cliente/carritodecompras";
+    }
+    @GetMapping("obrasList")
+    public String listadeobras(){
+        return "/listadeobras";
     }
 
 }
