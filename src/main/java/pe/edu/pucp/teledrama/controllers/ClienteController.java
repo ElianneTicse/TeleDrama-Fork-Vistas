@@ -112,6 +112,22 @@ public class ClienteController {
         return "administrador/teatro";
     }
 
+    @GetMapping("salasTD")
+    public String salasTeatro(){return "administrador/salas";}
+    @GetMapping("salaX")
+    public String salaX(){return "administrador/salaX";}
+
+    @GetMapping("operadores")
+    public String operadores(){return "administrador/operadores";}
+
+    @GetMapping("nuevoOperador")
+    public String newOperador(){return "administrador/newOperador";}
+
+    @GetMapping("crearTeatro")
+    public String crearTeatro(){
+        return "administrador/newTeatro";
+    }
+
 
     @GetMapping("buscadorPrincipal")
     public String buscador(){
@@ -132,5 +148,7 @@ public class ClienteController {
     public String teatrosCliente(){
         return "cliente/teatros";
     }
+
+
 
 }

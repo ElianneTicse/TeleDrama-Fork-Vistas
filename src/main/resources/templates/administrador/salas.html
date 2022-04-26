@@ -5,6 +5,7 @@
         <!-- Basic Page Needs
       ================================================== -->
         <meta charset="utf-8">
+        <meta charset="utf-8">
         <title>Teatros</title>
 
         <!-- Mobile Specific Metas
@@ -39,59 +40,42 @@
         <link rel="stylesheet" th:href="@{/plugins/colorbox/colorbox.css}">
         <!-- Template styles-->
         <link rel="stylesheet" th:href="@{/css/style.css}">
-        <style>
-            .btn-flotante {
-                font-size: 16px; /* Cambiar el tamaño de la tipografia */
-                text-transform: uppercase; /* Texto en mayusculas */
-                font-weight: bold; /* Fuente en negrita o bold */
-                color: #030303; /* Color del texto */
-                border-radius: 5px; /* Borde del boton */
-                letter-spacing: 2px; /* Espacio entre letras */
-                background-color: #fdb500; /* Color de fondo */
-                padding: 18px 30px; /* Relleno del boton */
-                position: fixed;
-                bottom: 40px;
-                right: 40px;
-                transition: all 300ms ease 0ms;
-                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-                z-index: 99;
-            }
 
-            .btn-flotante:hover {
-                background-color: #fdb500; /* Color de fondo al pasar el cursor */
-                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
-                transform: translateY(-7px);
-            }
-
-            @media only screen and (max-width: 600px) {
-                .btn-flotante {
-                    font-size: 14px;
-                    padding: 12px 20px;
-                    bottom: 20px;
-                    right: 20px;
-                }
-            }
-        </style>
     </head>
     <body>
         <div class="body-inner">
             <!--Navbar-->
             <header th:replace="fragments/navbarGeneral.html :: navbarAdmi"></header>
+            <!--/ Header end -->
 
-            <!--Banner-->
-            <div th:replace="fragments/general.html :: banner(bg = |background-image:url(@{/images/banner/banner1.jpg})|,
-                                                            title = 'Lista de Teatros',
-                                                            subtitle = 'Teatros TeleDrama')">
-            </div>
+            <!--        IMAGEN Referencial Start-->
+            <div id="banner-area" class="banner-area" th:style="'background-image:url('+@{/images/banner/banner1.jpg}+')'">
+                <div class="banner-text">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="banner-heading">
+                                    <h1 class="banner-title">Lista de Salas</h1>
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb justify-content-center">
+                                            <li class="breadcrumb-item active" aria-current="page">TeleDrama San Miguel</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div><!-- Col end -->
+                        </div><!-- Row end -->
+                    </div><!-- Container end -->
+                </div><!-- Banner text end -->
+            </div><!-- Banner area end -->
 
-            <!--Filtros-->
+
+            <!--    Esto es el nav de buscador-->
             <section class="call-to-action-box no-padding">
                 <div class="container">
                     <div class="action-style-box">
-                        <div class="btn-toolbar justify-content-between" role="toolbar"
-                             aria-label="Toolbar with button groups">
+                        <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
 
-                            <div class="col-md-3  col-12 my-1">
+                            <div class="col-md-3  col-12 my-1" >
                                 <select id="inputState" class="form-select">
                                     <option selected disabled>Selecione distrito</option>
                                     <option>Pueblo Libre</option>
@@ -100,44 +84,21 @@
                                 </select>
                             </div>
 
-
                             <div class="col-md-3 col-12 my-1">
-                                <div class="input-group">
-                                    <input type="search" class="form-control bg-white" placeholder="Nombre, correo ... "
-                                           aria-label="Search" aria-describedby="search-addon"/>
+                                <div class="input-group ">
+                                    <input type="search" class="form-control " placeholder="Nombre, correo ... " aria-label="Search" aria-describedby="search-addon" />
                                     <span class="input-group-text border-0" id="search-addon">
                                 <i class="fas fa-search"></i>
                             </span>
                                 </div>
                             </div>
 
-                            <div class="col-md-3 col-12 my-1 text-white d-flex justify-content-center">
-                                <a href="" class="class">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                         class="bi bi-list-ul mx-1" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                              d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                                    </svg>
-                                </a>
-                                <span class="fs-4">Lista</span>
-                                <span class="mx-1" style="font-size: xx-large">|</span>
-                                <a href="#" class="class">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                         class="bi bi-map mx-1" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                              d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
-                                    </svg>
-                                </a>
-                                <span class="fs-4 ps-1">Maps</span>
-                            </div>
-
-
                         </div>
                     </div><!-- Action style box -->
                 </div><!-- Container end -->
-            </section>
+            </section><!-- Action end -->
 
-            <!--Lista de Teatros-->
+            <!--    AQUI VA LA LISTA DE SALAS-->
             <section id="main-container" class="main-container pb-2 pt-4">
                 <div class="container">
                     <!--Fila de Teatros-->
@@ -146,7 +107,7 @@
                         <div class="col-lg-4 col-md-6 mb-5">
                             <div class="ts-service-box shadow rounded p-3">
                                 <div class="ts-service-image-wrapper mb-3">
-                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/teatro1.jpg}"
+                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/sala.jpg}"
                                          alt="service-image">
                                 </div>
                                 <div class="d-flex">
@@ -156,10 +117,10 @@
                                         <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
                                     </div>
                                     <div class="ts-service-info d-flex flex-column align-items-center">
-                                        <h3 class="service-box-title"><a>Teatro San Miguel</a></h3>
-                                        <span>Av. Universitaria 1801 - San Miguel</span>
-                                        <span>Coordenadas: 12.0695°S, 77.0794°W</span>
-                                        <a class="btn btn-primary w-50 mt-2" data-bs-toggle="modal" data-bs-target="#ventanaModal"
+                                        <h3 class="service-box-title centrado"><a>Sala #205361</a></h3>
+                                        <span>Aforo máximo: 40</span>
+                                        <span>Estado: Activo</span>
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ventanaModal"
                                            aria-label="service-details">Ver más</a>
                                     </div>
                                 </div>
@@ -169,7 +130,7 @@
                         <div class="col-lg-4 col-md-6 mb-5">
                             <div class="ts-service-box shadow rounded p-3">
                                 <div class="ts-service-image-wrapper mb-3">
-                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/teatro2.jpg}"
+                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/sala.jpg}"
                                          alt="service-image">
                                 </div>
                                 <div class="d-flex">
@@ -179,10 +140,10 @@
                                         <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
                                     </div>
                                     <div class="ts-service-info d-flex flex-column align-items-center">
-                                        <h3 class="service-box-title"><a>Teatro San Miguel</a></h3>
-                                        <span>Av. Universitaria 1801 - San Miguel</span>
-                                        <span>Coordenadas: 12.0695°S, 77.0794°W</span>
-                                        <a class="btn btn-primary w-50 mt-2" data-bs-toggle="modal" data-bs-target="#ventanaModal"
+                                        <h3 class="service-box-title centrado"><a>Sala #205361</a></h3>
+                                        <span>Aforo máximo: 40</span>
+                                        <span>Estado: Activo</span>
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ventanaModal"
                                            aria-label="service-details">Ver más</a>
                                     </div>
                                 </div>
@@ -192,33 +153,7 @@
                         <div class="col-lg-4 col-md-6 mb-5">
                             <div class="ts-service-box shadow rounded p-3">
                                 <div class="ts-service-image-wrapper mb-3">
-                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/teatro1.jpg}"
-                                         alt="service-image">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="ts-service-box-img d-flex flex-column justify-content-around">
-                                        <img loading="lazy" src="/images/icon-image/service-icon1.png"
-                                             alt="service-icon">
-                                        <span><i class="bi bi-x-circle-fill text-danger"> Inactivo</i></span>
-                                    </div>
-                                    <div class="ts-service-info d-flex flex-column align-items-center">
-                                        <h3 class="service-box-title"><a>Teatro San Miguel</a></h3>
-                                        <span>Av. Universitaria 1801 - San Miguel</span>
-                                        <span>Coordenadas: 12.0695°S, 77.0794°W</span>
-                                        <a class="btn btn-primary w-50 mt-2" data-bs-toggle="modal" data-bs-target="#ventanaModal"
-                                           aria-label="service-details">Ver más</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Fila de Teatros-->
-                    <div class="row mb-2">
-                        <!--Item Teatro-->
-                        <div class="col-lg-4 col-md-6 mb-5">
-                            <div class="ts-service-box shadow rounded p-3">
-                                <div class="ts-service-image-wrapper mb-3">
-                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/teatro2.jpg}"
+                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/sala.jpg}"
                                          alt="service-image">
                                 </div>
                                 <div class="d-flex">
@@ -228,56 +163,10 @@
                                         <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
                                     </div>
                                     <div class="ts-service-info d-flex flex-column align-items-center">
-                                        <h3 class="service-box-title"><a>Teatro San Miguel</a></h3>
-                                        <span>Av. Universitaria 1801 - San Miguel</span>
-                                        <span>Coordenadas: 12.0695°S, 77.0794°W</span>
-                                        <a class="btn btn-primary w-50 mt-2" data-bs-toggle="modal" data-bs-target="#ventanaModal"
-                                           aria-label="service-details">Ver más</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Item Teatro-->
-                        <div class="col-lg-4 col-md-6 mb-5">
-                            <div class="ts-service-box shadow rounded p-3">
-                                <div class="ts-service-image-wrapper mb-3">
-                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/teatro1.jpg}"
-                                         alt="service-image">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="ts-service-box-img d-flex flex-column justify-content-around">
-                                        <img loading="lazy" src="/images/icon-image/service-icon1.png"
-                                             alt="service-icon">
-                                        <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
-                                    </div>
-                                    <div class="ts-service-info d-flex flex-column align-items-center">
-                                        <h3 class="service-box-title"><a>Teatro San Miguel</a></h3>
-                                        <span>Av. Universitaria 1801 - San Miguel</span>
-                                        <span>Coordenadas: 12.0695°S, 77.0794°W</span>
-                                        <a class="btn btn-primary w-50 mt-2" data-bs-toggle="modal" data-bs-target="#ventanaModal"
-                                           aria-label="service-details">Ver más</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Item Teatro-->
-                        <div class="col-lg-4 col-md-6 mb-5">
-                            <div class="ts-service-box shadow rounded p-3">
-                                <div class="ts-service-image-wrapper mb-3">
-                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/teatro2.jpg}"
-                                         alt="service-image">
-                                </div>
-                                <div class="d-flex">
-                                    <div class="ts-service-box-img d-flex flex-column justify-content-around">
-                                        <img loading="lazy" src="/images/icon-image/service-icon1.png"
-                                             alt="service-icon">
-                                        <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
-                                    </div>
-                                    <div class="ts-service-info d-flex flex-column align-items-center">
-                                        <h3 class="service-box-title"><a>Teatro San Miguel</a></h3>
-                                        <span>Av. Universitaria 1801 - San Miguel</span>
-                                        <span>Coordenadas: 12.0695°S, 77.0794°W</span>
-                                        <a class="btn btn-primary w-50 mt-2" data-bs-toggle="modal" data-bs-target="#ventanaModal"
+                                        <h3 class="service-box-title centrado"><a>Sala #205361</a></h3>
+                                        <span>Aforo máximo: 40</span>
+                                        <span>Estado: Activo</span>
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ventanaModal"
                                            aria-label="service-details">Ver más</a>
                                     </div>
                                 </div>
@@ -290,7 +179,7 @@
                         <div class="col-lg-4 col-md-6 mb-5">
                             <div class="ts-service-box shadow rounded p-3">
                                 <div class="ts-service-image-wrapper mb-3">
-                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/teatro1.jpg}"
+                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/sala.jpg}"
                                          alt="service-image">
                                 </div>
                                 <div class="d-flex">
@@ -300,10 +189,10 @@
                                         <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
                                     </div>
                                     <div class="ts-service-info d-flex flex-column align-items-center">
-                                        <h3 class="service-box-title"><a>Teatro San Miguel</a></h3>
-                                        <span>Av. Universitaria 1801 - San Miguel</span>
-                                        <span>Coordenadas: 12.0695°S, 77.0794°W</span>
-                                        <a class="btn btn-primary w-50 mt-2" data-bs-toggle="modal" data-bs-target="#ventanaModal"
+                                        <h3 class="service-box-title centrado"><a>Sala #205361</a></h3>
+                                        <span>Aforo máximo: 40</span>
+                                        <span>Estado: Activo</span>
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ventanaModal"
                                            aria-label="service-details">Ver más</a>
                                     </div>
                                 </div>
@@ -313,7 +202,7 @@
                         <div class="col-lg-4 col-md-6 mb-5">
                             <div class="ts-service-box shadow rounded p-3">
                                 <div class="ts-service-image-wrapper mb-3">
-                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/teatro2.jpg}"
+                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/sala.jpg}"
                                          alt="service-image">
                                 </div>
                                 <div class="d-flex">
@@ -323,10 +212,57 @@
                                         <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
                                     </div>
                                     <div class="ts-service-info d-flex flex-column align-items-center">
-                                        <h3 class="service-box-title"><a>Teatro San Miguel</a></h3>
-                                        <span>Av. Universitaria 1801 - San Miguel</span>
-                                        <span>Coordenadas: 12.0695°S, 77.0794°W</span>
-                                        <a class="btn btn-primary w-50 mt-2" data-bs-toggle="modal" data-bs-target="#ventanaModal"
+                                        <h3 class="service-box-title centrado"><a>Sala #205361</a></h3>
+                                        <span>Aforo máximo: 40</span>
+                                        <span>Estado: Activo</span>
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ventanaModal"
+                                           aria-label="service-details">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-5">
+                            <div class="ts-service-box shadow rounded p-3">
+                                <div class="ts-service-image-wrapper mb-3">
+                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/sala.jpg}"
+                                         alt="service-image">
+                                </div>
+                                <div class="d-flex">
+                                    <div class="ts-service-box-img d-flex flex-column justify-content-around">
+                                        <img loading="lazy" src="/images/icon-image/service-icon1.png"
+                                             alt="service-icon">
+                                        <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
+                                    </div>
+                                    <div class="ts-service-info d-flex flex-column align-items-center">
+                                        <h3 class="service-box-title centrado"><a>Sala #205361</a></h3>
+                                        <span>Aforo máximo: 40</span>
+                                        <span>Estado: Activo</span>
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ventanaModal"
+                                           aria-label="service-details">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--Fila de Teatros-->
+                    <div class="row mb-2">
+                        <!--Item Teatro-->
+                        <div class="col-lg-4 col-md-6 mb-5">
+                            <div class="ts-service-box shadow rounded p-3">
+                                <div class="ts-service-image-wrapper mb-3">
+                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/sala.jpg}"
+                                         alt="service-image">
+                                </div>
+                                <div class="d-flex">
+                                    <div class="ts-service-box-img d-flex flex-column justify-content-around">
+                                        <img loading="lazy" src="/images/icon-image/service-icon1.png"
+                                             alt="service-icon">
+                                        <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
+                                    </div>
+                                    <div class="ts-service-info d-flex flex-column align-items-center">
+                                        <h3 class="service-box-title centrado"><a>Sala #205361</a></h3>
+                                        <span>Aforo máximo: 40</span>
+                                        <span>Estado: Activo</span>
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ventanaModal"
                                            aria-label="service-details">Ver más</a>
                                     </div>
                                 </div>
@@ -336,7 +272,7 @@
                         <div class="col-lg-4 col-md-6 mb-5">
                             <div class="ts-service-box shadow rounded p-3">
                                 <div class="ts-service-image-wrapper mb-3">
-                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/teatro1.jpg}"
+                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/sala.jpg}"
                                          alt="service-image">
                                 </div>
                                 <div class="d-flex">
@@ -346,10 +282,33 @@
                                         <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
                                     </div>
                                     <div class="ts-service-info d-flex flex-column align-items-center">
-                                        <h3 class="service-box-title"><a>Teatro San Miguel</a></h3>
-                                        <span>Av. Universitaria 1801 - San Miguel</span>
-                                        <span>Coordenadas: 12.0695°S, 77.0794°W</span>
-                                        <a class="btn btn-primary w-50 mt-2" data-bs-toggle="modal" data-bs-target="#ventanaModal"
+                                        <h3 class="service-box-title centrado"><a>Sala #205361</a></h3>
+                                        <span>Aforo máximo: 40</span>
+                                        <span>Estado: Activo</span>
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ventanaModal"
+                                           aria-label="service-details">Ver más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Item Teatro-->
+                        <div class="col-lg-4 col-md-6 mb-5">
+                            <div class="ts-service-box shadow rounded p-3">
+                                <div class="ts-service-image-wrapper mb-3">
+                                    <img loading="lazy" class="img-fluid" th:src="@{images/teatros/sala.jpg}"
+                                         alt="service-image">
+                                </div>
+                                <div class="d-flex">
+                                    <div class="ts-service-box-img d-flex flex-column justify-content-around">
+                                        <img loading="lazy" src="/images/icon-image/service-icon1.png"
+                                             alt="service-icon">
+                                        <span><i class="bi bi-check-circle-fill text-success"> Activo</i></span>
+                                    </div>
+                                    <div class="ts-service-info d-flex flex-column align-items-center">
+                                        <h3 class="service-box-title centrado"><a>Sala #205361</a></h3>
+                                        <span>Aforo máximo: 40</span>
+                                        <span>Estado: Activo</span>
+                                        <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ventanaModal"
                                            aria-label="service-details">Ver más</a>
                                     </div>
                                 </div>
@@ -359,13 +318,8 @@
                 </div>
             </section>
 
-            <!--Boton Crear Obra-->
-            <a type="button" class="btn-flotante border-0 p-3" style="font-size: 2rem"
-               href="#">
-                <i class="bi bi-plus-circle-fill text-white"></i>
-            </a>
 
-            <!--Modal ver detalles teatro-->
+
             <div class="modal" id="ventanaModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
                 <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
                     <div class="modal-content">
@@ -376,19 +330,21 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-4">
-                                    <img class="img-fluid centrado" th:src="@{images/teatros/teatro1.jpg}" alt="project-img">
+                                    <div class="container">
+                                        <img class="img-fluid justify-content-center container1" th:src="@{images/teatros/teatro1.jpg}" alt="project-img">
+                                    </div>
                                 </div>
                                 <div class="col">
                                     <div class="row">
                                         <div class="col">
                                             <fieldset disabled>
                                                 <div class="mb-3">
-                                                    <label for="disabledTextInput" class="form-label">Dirección:</label>
+                                                    <label for="disabledTextInput" class="form-label">DirecciÃ³n:</label>
                                                     <input type="text" id="disabledTextInput1" class="form-control disabled" placeholder="Av. Universitaria">
                                                 </div>
                                                 <div class="mb-4">
                                                     <label for="disabledTextInput" class="form-label">Coordenadas:</label>
-                                                    <input type="text" id="disabledTextInput1" class="form-control disabled" placeholder="12°04′38″S 77°05′34″O">
+                                                    <input type="text" id="disabledTextInput1" class="form-control disabled" placeholder="12Â°04â€²38â€³S 77Â°05â€²34â€³O">
                                                 </div>
                                                 <div class="mb-4">
                                                     <label for="disabledTextInput" class="form-label">#Salas: </label>
@@ -404,10 +360,10 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="disabledTextInput" class="form-label">Estado:</label>
-                                                    <input type="text" id="disabledTextInput1" class="form-control disabled" placeholder="Activo">
+                                                    <input type="text" id="disabledTextInput1" class="form-control disabled" placeholder="Disponible">
                                                 </div>
                                                 <div class="mb-3">
-                                                    <label for="disabledTextInput" class="form-label">Horarios de atención:</label>
+                                                    <label for="disabledTextInput" class="form-label">Horarios de atenciÃ³n:</label>
                                                     <input type="text" id="disabledTextInput1" class="form-control disabled" placeholder="Lunes - Viernes: 10am - 8pm">
                                                 </div>
                                             </fieldset>
@@ -417,13 +373,118 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Editar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#ventanaModal">Editar</button>
                             <a th:href="@{/salasTD}" type="button" class="btn btn-primary">Ver salas</a>
                         </div>
 
                     </div>
                 </div>
             </div>
+            <!-- Modal Editar Sala-->
+            <div class="modal" id="ventanaModal1" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">Sala #204528</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="mb-3">
+                                        <label for="aforo" class="form-label">Aforo máximo:</label>
+                                        <input type="number" id="aforo" class="form-control disabled" max="25" min="0" placeholder="Aforo">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="aforo" class="form-label">Estado:</label>
+                                        <select class="form-select" id="teatro" name="teatro" aria-label="Default select example">
+                                            <option selected>-- Estado --</option>
+                                            <option value="1">Activo</option>
+                                            <option value="2">Inactivo</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <a th:href="@{/salasTD}" type="button" class="btn btn-primary">Aceptar</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Crear-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Crear nueva función</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class=" row g-3">
+                                <div class="mb-3 mt-3 row">
+                                    <label for="teatro" class="col-sm-4 col-form-label">Teatro</label>
+                                    <div class="col-sm-8 text-end">
+                                        <select class="form-select" id="teatro" name="teatro" aria-label="Default select example">
+                                            <option selected>-- Elige un teatro --</option>
+                                            <option value="1">Teatro 1</option>
+                                            <option value="2">Teatro 2</option>
+                                            <option value="3">Teatro 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="sala" class="col-sm-4 col-form-label">Sala</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-select" id="sala" name="sala" aria-label="Default select example">
+                                            <option selected>-- Elige una sala --</option>
+                                            <option value="1">Sala 1</option>
+                                            <option value="2">Sala 2</option>
+                                            <option value="3">Sala 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="fecha" class="col-sm-4 col-form-label">Fecha y hora</label>
+                                    <div class="col-sm-8">
+                                        <input type="datetime-local" class="form-control" id="fecha" name="fecha">
+                                    </div>
+                                </div>
+                                <div class="mb-2 row">
+                                    <label for="costo" class="col-sm-4 col-form-label">Costo por ticket</label>
+                                    <div class="col-sm-8">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">S/.</span>
+                                            <input type="text" id="costo" name="costo" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="aforo" class="col-sm-4 col-form-label">Aforo</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="aforo" name="aforo"  type="number" min="1" max="50" value="50">
+                                    </div>
+                                    <span class="col-sm-4">Aforo máx: 50</span>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary">Crear</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
 
 
             <!-- Javascript Files
@@ -441,17 +502,18 @@
             <!-- shuffle -->
             <script th:src="@{plugins/shuffle/shuffle.min.js}" defer></script>
             <!-- Google Map API Key-->
-            <script th:src="@{https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU}"
-                    defer></script>
+            <script th:src="@{https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU}" defer></script>
             <!-- Google Map Plugin-->
             <script th:src="@{plugins/google-map/map.js}" defer></script>
 
             <!-- Template custom -->
             <script th:src="@{js/script.js}"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
                     crossorigin="anonymous"></script>
+
 
         </div><!-- Body inner end -->
     </body>
