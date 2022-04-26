@@ -37,6 +37,12 @@
             <!--Navbar-->
             <header th:replace="fragments/navbarGeneral.html :: navbarOperador(opcion = 'dashboard')"></header>
 
+            <!--Banner-->
+            <div th:replace="fragments/general.html :: banner(bg = |background-image:url(@{/images/banner/banner3.jpg})|,
+                                                            title = 'Dashboard',
+                                                            subtitle = 'TeleDrama')">
+            </div>
+
             <!--Main Container-->
             <section id="main-container" class="main-container pt-2">
                 <div class="container">
@@ -55,8 +61,8 @@
                                             <p class="card-text text-center mb-0">Butaca de Oro | Sala 1</p>
                                             <p class="card-text text-center">22/05/2021 - 8:30 PM</p>
                                             <div class="d-flex justify-content-center">
-                                                <i class="bi bi-arrow-up-circle-fill"></i>
-                                                <span>60</span>
+                                                <i class="bi bi-arrow-up-circle-fill fs-2 mx-1 text-dark"></i>
+                                                <span class="fs-2 pt-1 mx-1">102</span>
                                             </div>
                                         </div>
                                     </div>
@@ -76,8 +82,8 @@
                                             <p class="card-text text-center mb-0">Butaca de Oro | Sala 1</p>
                                             <p class="card-text text-center">22/05/2021 - 8:30 PM</p>
                                             <div class="d-flex justify-content-center">
-                                                <i class="bi bi-arrow-down-circle-fill"></i>
-                                                <span>60</span>
+                                                <i class="bi bi-arrow-down-circle-fill fs-2 mx-1 text-dark"></i>
+                                                <span class="fs-2 pt-1 mx-1">15</span>
                                             </div>
                                         </div>
                                     </div>
@@ -92,8 +98,8 @@
                                         <div class="col-12 col-md-5">
                                             <img th:src="@{/images/obras/obra1.jpg}" class="img-fluid">
                                         </div>
-                                        <div class="col-md-7">
-                                            <h5 class="card-title text-center">Kung-Fu Panda Adaptado</h5>
+                                        <div class="col-md-7 d-flex flex-column justify-content-center">
+                                            <h5 class="card-title text-center">Kung-Fu Panda: El Regreso de Winnie Pooh</h5>
                                             <div class="d-flex justify-content-center">
                                                 <h4 class="card-text">
                                                     <i class="bi bi-star-fill"></i>

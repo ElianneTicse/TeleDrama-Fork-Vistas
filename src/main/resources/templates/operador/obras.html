@@ -84,23 +84,10 @@
             <!--Navbar-->
             <header th:replace="fragments/navbarGeneral.html :: navbarOperador(opcion = 'obras')"></header>
 
-            <div id="banner-area" class="banner-area" th:style="|background-image:url(@{/images/banner/banner3.jpg})|">
-                <div class="banner-text">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="banner-heading">
-                                    <h1 class="banner-title">Lista de Obras</h1>
-                                    <nav aria-label="breadcrumb">
-                                        <ol class="breadcrumb justify-content-center">
-                                            <li class="breadcrumb-item active" aria-current="page">Obras TeleDrama</li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!--Banner-->
+            <div th:replace="fragments/general.html :: banner(bg = |background-image:url(@{/images/banner/banner3.jpg})|,
+                                                            title = 'Lista de Obras',
+                                                            subtitle = 'Obras TeleDrama')">
             </div>
 
             <!--Filtros-->

@@ -77,7 +77,17 @@
         <div class="body-inner">
             <!--Navbar-->
             <header th:replace="fragments/navbarGeneral.html :: navbarOperador('obras')"></header>
+
+            <!--Banner carousel-->
             <div class="banner-carousel banner-carousel-1 mb-0">
+                <div class="banner-carousel-item"
+                     style="background-image:url(https://www.dondeir.com/wp-content/uploads/2018/01/6-obras-teatro-en-enero-2018-inicia-actitud-07.jpg)">
+                </div>
+                <div class="banner-carousel-item"
+                     style="background-image:url(https://www.bbmundo.com/wp-content/uploads/2021/08/obras-de-teatro-virtuales-para-ninos-alicia.jpg)">
+                    <div class="slider-content text-left">
+                    </div>
+                </div>
                 <div class="banner-carousel-item"
                      style="background-image:url(https://www.dondeir.com/wp-content/uploads/2018/01/6-obras-teatro-en-enero-2018-inicia-actitud-07.jpg)">
                 </div>
@@ -88,13 +98,17 @@
                 </div>
             </div>
 
+            <!--Información Obra-->
             <section class="call-to-action no-padding">
                 <div class="container">
                     <div class="row">
+                        <!--Panel izquierda: Imagen y Descripción-->
                         <div class="col-sm-4">
                             <div class="card mb-3">
+                                <!--Imagen Obras-->
                                 <img src="https://cdn.teleticket.com.pe/especiales/viejos-hazmerreires-les-luthiers/images/logo-hazmerreir.png"
                                      class="card-img-top" alt="...">
+                                <!--Descripción-->
                                 <div class="card-body">
                                     <p class="card-text">En el mejor interés de los fanáticos y el personal, el
                                         organizador del evento está monitoreando las tendencias locales de COVID-19 y
@@ -102,15 +116,15 @@
                                         comprar entradas para este evento, usted acepta cumplir con las medidas de salud
                                         y seguridad vigentes en el momento del evento, tales como: usar mascarillas,
                                         proporcionar prueba de vacunación y/o cualquier sustento que las autoridades
-                                        locales establezcan como requisito para la asistencia, entre otros. Consulte con
-                                        frecuencia la web de Teleticket para conocer las actualizaciones, ya que las
-                                        pautas están sujetas a cambios.</p>
+                                        locales establezcan como requisito para la asistencia.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-8">
-                            <h2 class="card-title text-white">VIEJOS HAZMERREÍRES</h2>
+                            <!--Título Obras-->
+                            <h2 class="card-title text-white">Viejos Hazmerreíres</h2>
 
+                            <!--Hora y restricción-->
                             <div class="row">
                                 <div class="col-sm-2">
                                     <div class="card mb-3">
@@ -124,49 +138,48 @@
                                 </div>
                             </div>
 
+                            <!--Tickets vendidos y Monto Recaudado-->
                             <div class="card mb-3">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6 ts-facts">
                                             <div class="ts-facts-img text-center">
-                                                <h1><i class="bi bi-ticket-perforated"></i></h1>
+                                                <span class="fs-1"><i class="bi bi-ticket-perforated"></i></span>
                                             </div>
                                             <div class="ts-facts-content text-center">
-                                                <h2 class="ts-facts-num text-black-50"><span class="counterUp"
-                                                                                             data-count="658">0</span>
-                                                </h2>
+                                                <h2 class="ts-facts-num text-black-50 mt-2">
+                                                    <span class="counterUp" data-count="658">0</span></h2>
                                                 <h3 class="ts-facts-title">Tickets Vendidos</h3>
                                             </div>
-                                        </div><!-- Col end -->
+                                        </div>
 
                                         <div class="col-md-6 col-sm-6 ts-facts mt-5 mt-sm-0">
                                             <div class="ts-facts-img text-center">
-                                                <h1><i class="bi bi-cash"></i></h1>
+                                                <span class="fs-1"><i class="bi bi-cash"></i></span>
                                             </div>
                                             <div class="ts-facts-content text-center">
-                                                <h2 class="ts-facts-num text-black-50"><span class="counterUp"
-                                                                                             data-count="2564">0</span>
-                                                </h2>
+                                                <h2 class="ts-facts-num text-black-50 mt-2">
+                                                    <span class="counterUp" data-count="2564">0</span></h2>
                                                 <h3 class="ts-facts-title">Monto recaudado</h3>
                                             </div>
-                                        </div><!-- Col end -->
-
-                                    </div> <!-- Facts end -->
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
+                            <!--Mejor Actor y Director-->
                             <div class="row">
+                                <!--Mejor Actor-->
                                 <div class="col-sm-6">
                                     <div class="card mb-3" style="max-width: 540px;">
                                         <div class="row g-0">
-
                                             <div class="col-md-6">
                                                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Chris_Hemsworth_in_2017_by_Gage_Skidmore_%281%29.jpg"
                                                      class="img-fluid rounded-start" alt="...">
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="card-body">
-                                                    <h6 class="card-title text-black-50">Director</h6>
+                                                    <h6 class="card-title text-black-50">Mejor Actor</h6>
                                                     <h4 class="card-title">Chris Hemsworth</h4>
                                                     <h4 class="card-text text-center"><i class="bi bi-star-fill"></i><i
                                                             class="bi bi-star-fill"></i><i class="bi bi-star-fill"><i
@@ -177,6 +190,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--Mejor Director-->
                                 <div class="col-sm-6">
                                     <div class="card mb-3" style="max-width: 540px;">
                                         <div class="row g-0">
@@ -187,7 +201,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="card-body">
-                                                    <h6 class="card-title text-black-50">Director</h6>
+                                                    <h6 class="card-title text-black-50">Mejor Director</h6>
                                                     <h4 class="card-title">Chris Hemsworth</h4>
                                                     <h4 class="card-text text-center"><i class="bi bi-star-fill"></i><i
                                                             class="bi bi-star-fill"></i><i class="bi bi-star-fill"><i
@@ -199,13 +213,13 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
                 </div><!-- Container end -->
-            </section><!-- Action end -->
-            <!-- Table-->
+            </section>
+
+            <!--Tabla Funciones-->
             <div class="container">
                 <div class="row">
                     <div class="table-responsive">
@@ -393,12 +407,90 @@
                 </div>
             </div>
 
-            <!-- Button trigger modal -->
+            <!--Boton Crear Funcion-->
             <button type="button" class="btn-flotante border-0 p-3" style="font-size: 2rem" data-bs-toggle="modal"
                     data-bs-target="#crearFuncion">
                 <i class="bi bi-plus-circle-fill text-white"></i>
             </button>
 
+            <!--Modal Crear Función-->
+            <div class="modal fade" id="crearFuncion" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Crear Función para Obra 1</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row g-3 justify-content-center">
+                                <div class="mb-3 mt-3 row">
+                                    <label for="teatro"
+                                           class="col-sm-4 col-form-label">Teatro</label>
+                                    <div class="col-sm-8 text-end">
+                                        <select class="form-select" id="teatro" name="teatro"
+                                                aria-label="Default select example">
+                                            <option selected disabled>-- Elige un teatro --</option>
+                                            <option value="1">Teatro 1</option>
+                                            <option value="2">Teatro 2</option>
+                                            <option value="3">Teatro 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="sala"
+                                           class="col-sm-4 col-form-label">Sala</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-select" id="sala" name="sala"
+                                                aria-label="Default select example">
+                                            <option selected disabled>-- Elige una sala --</option>
+                                            <option value="1">Sala 1</option>
+                                            <option value="2">Sala 2</option>
+                                            <option value="3">Sala 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="fecha" class="col-sm-4 col-form-label">Fecha y hora</label>
+                                    <div class="col-sm-8">
+                                        <input type="datetime-local" class="form-control"
+                                               id="fecha" name="fecha">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row">
+                                    <label for="costo" class="col-sm-4 col-form-label">Costo por
+                                        ticket</label>
+                                    <div class="col-sm-8">
+                                        <div class="input-group">
+                                            <span class="input-group-text">S/.</span>
+                                            <input type="text" id="costo" name="costo"
+                                                   class="form-control"
+                                                   aria-label="Dollar amount (with dot and two decimal places)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row align-items-center">
+                                    <label for="aforo"
+                                           class="col-sm-4 col-form-label">Aforo</label>
+                                    <div class="col-sm-4">
+                                        <input class="form-control" id="aforo" name="aforo"
+                                               type="number" min="1" max="50" value="50">
+                                    </div>
+                                    <span class="col-sm-4">Aforo máx: 50</span>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancelar
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Crear</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Footer-->
             <footer id="footer" class="footer bg-overlay">
                 <div class="footer-main">
                     <div class="container">
@@ -478,82 +570,7 @@
                 </div>
             </footer>
 
-            <!-- Modal Crear-->
-            <div class="modal fade" id="crearFuncion" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Crear Función para Obra 1</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form class="row g-3 justify-content-center">
-                                <div class="mb-3 mt-3 row">
-                                    <label for="teatro"
-                                           class="col-sm-4 col-form-label">Teatro</label>
-                                    <div class="col-sm-8 text-end">
-                                        <select class="form-select" id="teatro" name="teatro"
-                                                aria-label="Default select example">
-                                            <option selected disabled>-- Elige un teatro --</option>
-                                            <option value="1">Teatro 1</option>
-                                            <option value="2">Teatro 2</option>
-                                            <option value="3">Teatro 3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-3 row">
-                                    <label for="sala"
-                                           class="col-sm-4 col-form-label">Sala</label>
-                                    <div class="col-sm-8">
-                                        <select class="form-select" id="sala" name="sala"
-                                                aria-label="Default select example">
-                                            <option selected disabled>-- Elige una sala --</option>
-                                            <option value="1">Sala 1</option>
-                                            <option value="2">Sala 2</option>
-                                            <option value="3">Sala 3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="mb-3 row">
-                                    <label for="fecha" class="col-sm-4 col-form-label">Fecha y hora</label>
-                                    <div class="col-sm-8">
-                                        <input type="datetime-local" class="form-control"
-                                               id="fecha" name="fecha">
-                                    </div>
-                                </div>
-                                <div class="mb-3 row">
-                                    <label for="costo" class="col-sm-4 col-form-label">Costo por
-                                        ticket</label>
-                                    <div class="col-sm-8">
-                                        <div class="input-group">
-                                            <span class="input-group-text">S/.</span>
-                                            <input type="text" id="costo" name="costo"
-                                                   class="form-control"
-                                                   aria-label="Dollar amount (with dot and two decimal places)">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mb-3 row align-items-center">
-                                    <label for="aforo"
-                                           class="col-sm-4 col-form-label">Aforo</label>
-                                    <div class="col-sm-4">
-                                        <input class="form-control" id="aforo" name="aforo"
-                                               type="number" min="1" max="50" value="50">
-                                    </div>
-                                    <span class="col-sm-4">Aforo máx: 50</span>
-                                </div>
-                                <div class="modal-footer justify-content-center">
-                                    <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Cancelar
-                                    </button>
-                                    <button type="button" class="btn btn-primary">Crear</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
             <!-- Javascript Files
             ================================================== -->
