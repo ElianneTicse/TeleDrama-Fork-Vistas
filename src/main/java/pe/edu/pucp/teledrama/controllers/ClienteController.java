@@ -163,6 +163,11 @@ public class ClienteController {
     public String editarElenco() {
         return "/administrador/editarElenco";
     }
+    @GetMapping("/editarOperador")
+    public String editarOperador() {
+        return "/administrador/editarOperador";
+    }
+
 
 
 

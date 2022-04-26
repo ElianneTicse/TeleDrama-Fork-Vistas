@@ -5,7 +5,7 @@
         <!-- Basic Page Needs
       ================================================== -->
         <meta charset="utf-8">
-        <title>Crear Obra</title>
+        <title>Operador-A</title>
 
         <!-- Mobile Specific Metas
       ================================================== -->
@@ -71,7 +71,7 @@
 
             <!--Banner-->
             <div th:replace="fragments/general.html :: banner(bg = |background-image:url(@{/images/banner/banner3.jpg})|,
-                                                            title = 'Nuevo operador',
+                                                            title = 'Operador A',
                                                             subtitle = 'Teledrama')">
             </div>
 
@@ -82,30 +82,30 @@
                             <form class="rounded" action="">
                                 <div class="mb-4">
                                     <label class="form-label">Nombre</label>
-                                    <input value="" type="text" class="form-control" name="nombre">
+                                    <input value="" type="text" class="form-control" disabled name="Operador A">
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">Apellido</label>
-                                    <input value="" type="text" class="form-control" name="apellido">
+                                    <input value="" type="text" class="form-control" disabled name="Operador A">
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">DNI</label>
-                                    <input value="" type="text" class="form-control" name="DNI">
+                                    <input value="" type="text" class="form-control" disabled name="74968595">
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">Correo</label>
-                                    <input value="" type="email" class="form-control" name="operador@teledrama.com">
+                                    <input value="" type="email" class="form-control" disabled name="operadorA@teledrama.com">
                                 </div>
                                 <div class="mb-4">
                                     <label class="form-label">Teléfono</label>
-                                    <input value="" type="text" class="form-control" name="movil">
+                                    <input value="" type="text" class="form-control" disabled name="3641169">
                                 </div>
 
                                 <div class="row mb-4">
                                     <div class="col-md-5">
                                         <label class="form-label">Estado</label>
-                                        <select name="genero" class="form-select" disabled>
-                                            <option value="" selected disabled>Activo</option>
+                                        <select name="genero" class="form-select">
+                                            <option value="" selected disabled>-- Seleccionar estado --</option>
                                             <option value="drama">Activo</option>
                                             <option value="comedia">Inactivo</option>
                                         </select>
@@ -129,7 +129,7 @@
 
                                 <div class="text-center">
                                     <a type="button" th:href="@{operadores}" class="btn btn-secondary">Cancelar</a>
-                                    <a type="button" th:href="@{operadores}" class="btn btn-primary">Crear</a>
+                                    <a type="button" th:href="@{operadores}" class="btn btn-primary">Editar</a>
                                 </div>
                             </form>
                         </div>
