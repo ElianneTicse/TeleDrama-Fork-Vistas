@@ -161,4 +161,9 @@ public class ClienteController {
 
 
 
+    @GetMapping("descargaQR")
+    public String descargarQR(){
+        return "cliente/descargaQR";
+    }
+
 }
