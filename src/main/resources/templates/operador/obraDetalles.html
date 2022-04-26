@@ -329,7 +329,7 @@
                                         <td>s/ 15.80</td>
                                         <td>0</td>
                                         <td><i class="bi bi-check-circle-fill text-success"> Vigente</i></td>
-                                        <td><a href="">
+                                        <td><a data-bs-toggle="modal" data-bs-target="#editarFuncion">
                                             <i class="fas fa-edit"></i></a></td>
                                         <td><a href="">
                                             <i class="fas fa-trash-alt text-danger"></i></a></td>
@@ -344,7 +344,7 @@
                                         <td>s/ 15.80</td>
                                         <td>12</td>
                                         <td><i class="bi bi-check-circle-fill text-success"> Vigente</i></td>
-                                        <td><a href="">
+                                        <td><a data-bs-toggle="modal" data-bs-target="#editarFuncion">
                                             <i class="fas fa-edit"></i></a></td>
                                         <td><a href="">
                                             <i class="fas fa-trash-alt text-secondary "></i></a></td>
@@ -359,7 +359,7 @@
                                         <td>s/ 15.80</td>
                                         <td>12</td>
                                         <td><i class="bi bi-x-circle-fill text-danger"> Terminada</i></td>
-                                        <td><a href="">
+                                        <td><a data-bs-toggle="modal" data-bs-target="#editarFuncion">
                                             <i class="fas fa-edit"></i></a></td>
                                         <td><a href="">
                                             <i class="fas fa-trash-alt text-danger"></i></a></td>
@@ -374,7 +374,7 @@
                                         <td>s/ 15.80</td>
                                         <td>12</td>
                                         <td><i class="bi bi-check-circle-fill text-success"> Vigente</i></td>
-                                        <td><a href="">
+                                        <td><a data-bs-toggle="modal" data-bs-target="#editarFuncion">
                                             <i class="fas fa-edit"></i></a></td>
                                         <td><a href="">
                                             <i class="fas fa-trash-alt text-secondary"></i></a></td>
@@ -389,7 +389,7 @@
                                         <td>s/ 15.80</td>
                                         <td>12</td>
                                         <td><i class="bi bi-check-circle-fill text-success"> Vigente</i></td>
-                                        <td><a href="">
+                                        <td><a data-bs-toggle="modal" data-bs-target="#editarFuncion">
                                             <i class="fas fa-edit"></i></a></td>
                                         <td><a href="">
                                             <i class="fas fa-trash-alt text-secondary"></i></a></td>
@@ -477,6 +477,50 @@
                                                type="number" min="1" max="50" value="50">
                                     </div>
                                     <span class="col-sm-4">Aforo máx: 50</span>
+                                </div>
+                                <div class="modal-footer justify-content-center">
+                                    <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancelar
+                                    </button>
+                                    <button type="button" class="btn btn-primary">Crear</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Editar Función-->
+            <div class="modal fade" id="editarFuncion" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar Función</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="row g-3 justify-content-center">
+                                <!--Fecha y Hora-->
+                                <div class="mb-3 mt-4 row">
+                                    <label for="fecha" class="col-sm-4 col-form-label">Fecha y hora</label>
+                                    <div class="col-sm-8">
+                                        <input type="datetime-local" class="form-control"
+                                               id="fecha" name="fecha">
+                                    </div>
+                                </div>
+                                <!--Costo por Ticket-->
+                                <div class="mb-3 row">
+                                    <label for="costo" class="col-sm-4 col-form-label">Costo por
+                                        ticket</label>
+                                    <div class="col-sm-8">
+                                        <div class="input-group">
+                                            <span class="input-group-text">S/.</span>
+                                            <input type="text" id="costo" name="costo"
+                                                   class="form-control"
+                                                   aria-label="Dollar amount (with dot and two decimal places)">
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="modal-footer justify-content-center">
                                     <button type="button" class="btn btn-secondary"

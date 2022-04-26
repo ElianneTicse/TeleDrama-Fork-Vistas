@@ -105,6 +105,16 @@ public class ClienteController {
         return "operador/teatros";
     }
 
+    @GetMapping("crearObra")
+    public String crearObra(){
+        return "operador/crearObra";
+    }
+
+    @GetMapping("editarObra")
+    public String editarObra(){
+        return "operador/editarObra";
+    }
+
     //Administrador
 
     @GetMapping("teatrosAdmi")
