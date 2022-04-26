@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("")
 public class ClienteController {
-
     @GetMapping(value={"", "/"})
     public String home2() {
         return "news-single";
@@ -32,5 +31,4 @@ public class ClienteController {
     public String homeCliente() {
         return "cliente/index";
     }
-
 }
