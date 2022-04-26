@@ -145,7 +145,7 @@
                                 </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary mx-2">Actualizar</button>
-                                    <button type="submit" class="btn btn-primary mx-2">Eliminar perfil</button>
+                                    <button type="button" class="btn btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#eliminarPerfil">Eliminar perfil</button>
                                 </div>
                             </form>
                         </div>
@@ -272,6 +272,24 @@
                             <img class="image-lol" src="https://yt3.ggpht.com/-Y4ybONkbdYA/AAAAAAAAAAI/AAAAAAAAAAA/SCMi3HFru2w/s100-c-k-no-rj-c0xffffff/photo.jpg" alt="" />
                             <img class="image-lol" src="https://yt3.ggpht.com/-Y4ybONkbdYA/AAAAAAAAAAI/AAAAAAAAAAA/SCMi3HFru2w/s100-c-k-no-rj-c0xffffff/photo.jpg" alt="" />
                             <img class="image-lol" src="https://yt3.ggpht.com/-Y4ybONkbdYA/AAAAAAAAAAI/AAAAAAAAAAA/SCMi3HFru2w/s100-c-k-no-rj-c0xffffff/photo.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="eliminarPerfil" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle" data-bs-backdrop="static">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h2 class="text-center">¿Desea eliminar su perfil?</h2>
+                            <p class="text-center">Recuerde que no podrá retroceder la acción</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" >Cancelar</button>
+                            <button type="button" class="btn btn-primary">Aceptar</button>
                         </div>
                     </div>
                 </div>
