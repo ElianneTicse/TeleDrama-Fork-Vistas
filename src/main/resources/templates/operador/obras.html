@@ -45,7 +45,39 @@
         <link rel="stylesheet" th:href="@{assets/css/lightbox.css}">
         <link th:href="@{vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
         <link rel="stylesheet" th:href="@{css/style.css}">
+        <style>
+            .btn-flotante {
+                font-size: 16px; /* Cambiar el tamaño de la tipografia */
+                text-transform: uppercase; /* Texto en mayusculas */
+                font-weight: bold; /* Fuente en negrita o bold */
+                color: #030303; /* Color del texto */
+                border-radius: 5px; /* Borde del boton */
+                letter-spacing: 2px; /* Espacio entre letras */
+                background-color: #fdb500; /* Color de fondo */
+                padding: 18px 30px; /* Relleno del boton */
+                position: fixed;
+                bottom: 40px;
+                right: 40px;
+                transition: all 300ms ease 0ms;
+                box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                z-index: 99;
+            }
 
+            .btn-flotante:hover {
+                background-color: #fdb500; /* Color de fondo al pasar el cursor */
+                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+                transform: translateY(-7px);
+            }
+
+            @media only screen and (max-width: 600px) {
+                .btn-flotante {
+                    font-size: 14px;
+                    padding: 12px 20px;
+                    bottom: 20px;
+                    right: 20px;
+                }
+            }
+        </style>
     </head>
     <body>
         <div class="body-inner">
@@ -102,8 +134,10 @@
             <!--Lista de Teatros-->
             <section id="main-container" class="main-container pb-2 pt-4">
                 <div class="container">
+                    <!--Fila de Obras-->
                     <div class="row mb-3">
-                        <div class="col-md-4">
+                        <!--Item de obra-->
+                        <div class="col-md-3">
                             <div class="item shuffle-item">
                                 <div class="project-img-container shadow bg-body rounded">
                                     <a class="gallery-popup" th:href="@{/images/obras/obra3.jpg}"
@@ -111,7 +145,7 @@
                                         <img class="img-fluid" th:src="@{/images/obras/obra3.jpg}"
                                              alt="project-img">
                                     </a>
-                                    <div class="project-item-info" style="top: 40%">
+                                    <div class="project-item-info" style="top: 30%">
                                         <div class="project-item-info-content">
                                             <div class="row">
                                                 <div class="col-9">
@@ -126,12 +160,14 @@
                                             </div>
                                             <div>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Crear función</button>
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
                                                 </h4>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Ver Detalles</button>
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -139,7 +175,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <!--Item de obra-->
+                        <div class="col-md-3">
                             <div class="item shuffle-item">
                                 <div class="project-img-container shadow bg-body rounded">
                                     <a class="gallery-popup" th:href="@{/images/obras/obra2.jpg}"
@@ -147,7 +184,7 @@
                                         <img class="img-fluid" th:src="@{/images/obras/obra2.jpg}"
                                              alt="project-img">
                                     </a>
-                                    <div class="project-item-info" style="top: 40%">
+                                    <div class="project-item-info" style="top: 30%">
                                         <div class="project-item-info-content">
                                             <div class="row">
                                                 <div class="col-9">
@@ -162,12 +199,14 @@
                                             </div>
                                             <div>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Crear función</button>
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
                                                 </h4>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Ver Detalles</button>
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -175,7 +214,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <!--Item de obra-->
+                        <div class="col-md-3">
                             <div class="item shuffle-item">
                                 <div class="project-img-container shadow bg-body rounded">
                                     <a class="gallery-popup" th:href="@{/images/obras/obra3.jpg}"
@@ -183,7 +223,7 @@
                                         <img class="img-fluid" th:src="@{/images/obras/obra3.jpg}"
                                              alt="project-img">
                                     </a>
-                                    <div class="project-item-info" style="top: 40%">
+                                    <div class="project-item-info" style="top: 30%">
                                         <div class="project-item-info-content">
                                             <div class="row">
                                                 <div class="col-9">
@@ -198,12 +238,53 @@
                                             </div>
                                             <div>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Crear función</button>
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
                                                 </h4>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Ver Detalles</button>
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Item de obra-->
+                        <div class="col-md-3">
+                            <div class="item shuffle-item">
+                                <div class="project-img-container shadow bg-body rounded">
+                                    <a class="gallery-popup" th:href="@{/images/obras/obra2.jpg}"
+                                       aria-label="project-img">
+                                        <img class="img-fluid" th:src="@{/images/obras/obra2.jpg}"
+                                             alt="project-img">
+                                    </a>
+                                    <div class="project-item-info" style="top: 30%">
+                                        <div class="project-item-info-content">
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <h4 class="project-item-title my-2 text-white shadow-lg">Romeo y
+                                                        Julieta</h4>
+                                                </div>
+                                                <div class="col-3">
+                                                    <h4 class="project-item-title my-2 text-center">
+                                                        <a href="">
+                                                            <i class="fas fa-edit"></i></a></h4>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="project-item-title my-2 text-center">
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
+                                                </h4>
+                                                <h4 class="project-item-title my-2 text-center">
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -212,8 +293,10 @@
                             </div>
                         </div>
                     </div>
+                    <!--Fila de Obras-->
                     <div class="row mb-3">
-                        <div class="col-md-4">
+                        <!--Item de obra-->
+                        <div class="col-md-3">
                             <div class="item shuffle-item">
                                 <div class="project-img-container shadow bg-body rounded">
                                     <a class="gallery-popup" th:href="@{/images/obras/obra2.jpg}"
@@ -221,7 +304,7 @@
                                         <img class="img-fluid" th:src="@{/images/obras/obra2.jpg}"
                                              alt="project-img">
                                     </a>
-                                    <div class="project-item-info" style="top: 40%">
+                                    <div class="project-item-info" style="top: 30%">
                                         <div class="project-item-info-content">
                                             <div class="row">
                                                 <div class="col-9">
@@ -236,12 +319,14 @@
                                             </div>
                                             <div>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Crear función</button>
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
                                                 </h4>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Ver Detalles</button>
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -249,7 +334,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <!--Item de obra-->
+                        <div class="col-md-3">
                             <div class="item shuffle-item">
                                 <div class="project-img-container shadow bg-body rounded">
                                     <a class="gallery-popup" th:href="@{/images/obras/obra3.jpg}"
@@ -257,7 +343,7 @@
                                         <img class="img-fluid" th:src="@{/images/obras/obra3.jpg}"
                                              alt="project-img">
                                     </a>
-                                    <div class="project-item-info" style="top: 40%">
+                                    <div class="project-item-info" style="top: 30%">
                                         <div class="project-item-info-content">
                                             <div class="row">
                                                 <div class="col-9">
@@ -272,12 +358,14 @@
                                             </div>
                                             <div>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Crear función</button>
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
                                                 </h4>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Ver Detalles</button>
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -285,7 +373,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <!--Item de obra-->
+                        <div class="col-md-3">
                             <div class="item shuffle-item">
                                 <div class="project-img-container shadow bg-body rounded">
                                     <a class="gallery-popup" th:href="@{/images/obras/obra2.jpg}"
@@ -293,7 +382,7 @@
                                         <img class="img-fluid" th:src="@{/images/obras/obra2.jpg}"
                                              alt="project-img">
                                     </a>
-                                    <div class="project-item-info" style="top: 40%">
+                                    <div class="project-item-info" style="top: 30%">
                                         <div class="project-item-info-content">
                                             <div class="row">
                                                 <div class="col-9">
@@ -308,12 +397,53 @@
                                             </div>
                                             <div>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Crear función</button>
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
                                                 </h4>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Ver Detalles</button>
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Item de obra-->
+                        <div class="col-md-3">
+                            <div class="item shuffle-item">
+                                <div class="project-img-container shadow bg-body rounded">
+                                    <a class="gallery-popup" th:href="@{/images/obras/obra3.jpg}"
+                                       aria-label="project-img">
+                                        <img class="img-fluid" th:src="@{/images/obras/obra3.jpg}"
+                                             alt="project-img">
+                                    </a>
+                                    <div class="project-item-info" style="top: 30%">
+                                        <div class="project-item-info-content">
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <h4 class="project-item-title my-2 text-white shadow-lg">Romeo y
+                                                        Julieta</h4>
+                                                </div>
+                                                <div class="col-3">
+                                                    <h4 class="project-item-title my-2 text-center">
+                                                        <a href="">
+                                                            <i class="fas fa-edit"></i></a></h4>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="project-item-title my-2 text-center">
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
+                                                </h4>
+                                                <h4 class="project-item-title my-2 text-center">
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -322,8 +452,10 @@
                             </div>
                         </div>
                     </div>
+                    <!--Fila de Obras-->
                     <div class="row mb-3">
-                        <div class="col-md-4">
+                        <!--Item de obra-->
+                        <div class="col-md-3">
                             <div class="item shuffle-item">
                                 <div class="project-img-container shadow bg-body rounded">
                                     <a class="gallery-popup" th:href="@{/images/obras/obra3.jpg}"
@@ -331,7 +463,7 @@
                                         <img class="img-fluid" th:src="@{/images/obras/obra3.jpg}"
                                              alt="project-img">
                                     </a>
-                                    <div class="project-item-info" style="top: 40%">
+                                    <div class="project-item-info" style="top: 30%">
                                         <div class="project-item-info-content">
                                             <div class="row">
                                                 <div class="col-9">
@@ -346,12 +478,14 @@
                                             </div>
                                             <div>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Crear función</button>
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
                                                 </h4>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Ver Detalles</button>
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -359,7 +493,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <!--Item de obra-->
+                        <div class="col-md-3">
                             <div class="item shuffle-item">
                                 <div class="project-img-container shadow bg-body rounded">
                                     <a class="gallery-popup" th:href="@{/images/obras/obra2.jpg}"
@@ -367,7 +502,7 @@
                                         <img class="img-fluid" th:src="@{/images/obras/obra2.jpg}"
                                              alt="project-img">
                                     </a>
-                                    <div class="project-item-info" style="top: 40%">
+                                    <div class="project-item-info" style="top: 30%">
                                         <div class="project-item-info-content">
                                             <div class="row">
                                                 <div class="col-9">
@@ -382,12 +517,14 @@
                                             </div>
                                             <div>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Crear función</button>
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
                                                 </h4>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Ver Detalles</button>
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -395,7 +532,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <!--Item de obra-->
+                        <div class="col-md-3">
                             <div class="item shuffle-item">
                                 <div class="project-img-container shadow bg-body rounded">
                                     <a class="gallery-popup" th:href="@{/images/obras/obra3.jpg}"
@@ -403,7 +541,7 @@
                                         <img class="img-fluid" th:src="@{/images/obras/obra3.jpg}"
                                              alt="project-img">
                                     </a>
-                                    <div class="project-item-info" style="top: 40%">
+                                    <div class="project-item-info" style="top: 30%">
                                         <div class="project-item-info-content">
                                             <div class="row">
                                                 <div class="col-9">
@@ -418,12 +556,53 @@
                                             </div>
                                             <div>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Crear función</button>
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
                                                 </h4>
                                                 <h4 class="project-item-title my-2 text-center">
-                                                    <button class="btn btn-primary mb-2 px-4 w-50"
-                                                            href="#">Ver Detalles</button>
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Item de obra-->
+                        <div class="col-md-3">
+                            <div class="item shuffle-item">
+                                <div class="project-img-container shadow bg-body rounded">
+                                    <a class="gallery-popup" th:href="@{/images/obras/obra2.jpg}"
+                                       aria-label="project-img">
+                                        <img class="img-fluid" th:src="@{/images/obras/obra2.jpg}"
+                                             alt="project-img">
+                                    </a>
+                                    <div class="project-item-info" style="top: 30%">
+                                        <div class="project-item-info-content">
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    <h4 class="project-item-title my-2 text-white shadow-lg">Romeo y
+                                                        Julieta</h4>
+                                                </div>
+                                                <div class="col-3">
+                                                    <h4 class="project-item-title my-2 text-center">
+                                                        <a href="">
+                                                            <i class="fas fa-edit"></i></a></h4>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h4 class="project-item-title my-2 text-center">
+                                                    <button class="btn btn-primary mb-2 px-4 w-75"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#crearFuncion">Crear función
+                                                    </button>
+                                                </h4>
+                                                <h4 class="project-item-title my-2 text-center">
+                                                    <a class="btn btn-primary mb-2 px-4 w-75"
+                                                       th:href="@{/detalleobra}">Ver Detalles</a>
                                                 </h4>
                                             </div>
                                         </div>
@@ -433,14 +612,91 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal Crear Función-->
+                <div class="modal fade" id="crearFuncion" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Crear Función para Romeo y Julieta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3 justify-content-center">
+                                    <div class="mb-3 mt-3 row">
+                                        <label for="teatro"
+                                               class="col-sm-4 col-form-label">Teatro</label>
+                                        <div class="col-sm-8 text-end">
+                                            <select class="form-select" id="teatro" name="teatro"
+                                                    aria-label="Default select example">
+                                                <option selected disabled>-- Elige un teatro --</option>
+                                                <option value="1">Teatro 1</option>
+                                                <option value="2">Teatro 2</option>
+                                                <option value="3">Teatro 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="sala"
+                                               class="col-sm-4 col-form-label">Sala</label>
+                                        <div class="col-sm-8">
+                                            <select class="form-select" id="sala" name="sala"
+                                                    aria-label="Default select example">
+                                                <option selected disabled>-- Elige una sala --</option>
+                                                <option value="1">Sala 1</option>
+                                                <option value="2">Sala 2</option>
+                                                <option value="3">Sala 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="fecha" class="col-sm-4 col-form-label">Fecha y hora</label>
+                                        <div class="col-sm-8">
+                                            <input type="datetime-local" class="form-control"
+                                                   id="fecha" name="fecha">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row">
+                                        <label for="costo" class="col-sm-4 col-form-label">Costo por
+                                            ticket</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group">
+                                                <span class="input-group-text">S/.</span>
+                                                <input type="text" id="costo" name="costo"
+                                                       class="form-control"
+                                                       aria-label="Dollar amount (with dot and two decimal places)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3 row align-items-center">
+                                        <label for="aforo"
+                                               class="col-sm-4 col-form-label">Aforo</label>
+                                        <div class="col-sm-4">
+                                            <input class="form-control" id="aforo" name="aforo"
+                                                   type="number" min="1" max="50" value="50">
+                                        </div>
+                                        <span class="col-sm-4">Aforo máx: 50</span>
+                                    </div>
+                                    <div class="modal-footer justify-content-center">
+                                        <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancelar
+                                        </button>
+                                        <button type="button" class="btn btn-primary">Crear</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
-            <div id="back-to-top" class="back-to-top position-fixed" style="display: block;">
-                <!--                    <button class="btn btn-primary">-->
-                <!--                        <i class="fa fa-angle-double-up"></i>-->
-                <!--                    </button>-->
-                <button class="btn btn-primary " type="button">+</button>
-            </div>
+            <!-- Boton flotante para Crear Obra -->
+            <button type="button" class="btn-flotante border-0 p-3" style="font-size: 2rem" data-bs-toggle="modal"
+                    data-bs-target="#crearObra">
+                <i class="bi bi-plus-circle-fill text-white"></i>
+            </button>
 
 
             <!-- Javascript Files
@@ -472,6 +728,10 @@
             <script th:src="@{assets/js/slick-slider.js}"></script>
             <script th:src="@{assets/js/custom.js}"></script>
             <script th:src="@{js/script.js}"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                    crossorigin="anonymous"></script>
 
 
         </div><!-- Body inner end -->

@@ -83,8 +83,7 @@ public class ClienteController {
         return "cliente/listadeobras";
     }
 
-
-    // Operador (No funciona en el operador controller :'( )
+    // Operador (No funcionan los estilos en el operador controller x alguna razon :'( )
 
     @GetMapping("dashboard")
     public String dashboard() {
@@ -105,6 +104,8 @@ public class ClienteController {
     public String teatros() {
         return "operador/teatros";
     }
+
+    //Administrador
 
     @GetMapping("teatrosAdmi")
     public String teatrosAdmi(){

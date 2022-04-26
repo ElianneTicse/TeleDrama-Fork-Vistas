@@ -394,9 +394,9 @@
             </div>
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn-flotante border-0" style="font-size: 2rem" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                <i class="bi bi-plus-circle"></i>
+            <button type="button" class="btn-flotante border-0 p-3" style="font-size: 2rem" data-bs-toggle="modal"
+                    data-bs-target="#crearFuncion">
+                <i class="bi bi-plus-circle-fill text-white"></i>
             </button>
 
             <footer id="footer" class="footer bg-overlay">
@@ -473,34 +473,29 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div><!-- Row end -->
-
-                        <!--                        <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">-->
-                        <!--                            <button class="btn btn-primary" title="Back to Top">-->
-                        <!--                                <i class="fa fa-angle-double-up"></i>-->
-                        <!--                            </button>-->
-                        <!--                        </div>-->
-
-                    </div><!-- Container end -->
-                </div><!-- Copyright end -->
-            </footer><!-- Footer end -->
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
             <!-- Modal Crear-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                 aria-hidden="true">
+            <div class="modal fade" id="crearFuncion" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Crear nueva función</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="exampleModalLabel">Crear Función para Obra 1</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <form class=" row g-3">
+                            <form class="row g-3 justify-content-center">
                                 <div class="mb-3 mt-3 row">
-                                    <label for="teatro" class="col-sm-4 col-form-label">Teatro</label>
+                                    <label for="teatro"
+                                           class="col-sm-4 col-form-label">Teatro</label>
                                     <div class="col-sm-8 text-end">
-                                        <select class="form-select" id="teatro" name="teatro" aria-label="Default select example">
-                                            <option selected>-- Elige un teatro --</option>
+                                        <select class="form-select" id="teatro" name="teatro"
+                                                aria-label="Default select example">
+                                            <option selected disabled>-- Elige un teatro --</option>
                                             <option value="1">Teatro 1</option>
                                             <option value="2">Teatro 2</option>
                                             <option value="3">Teatro 3</option>
@@ -508,10 +503,12 @@
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="sala" class="col-sm-4 col-form-label">Sala</label>
+                                    <label for="sala"
+                                           class="col-sm-4 col-form-label">Sala</label>
                                     <div class="col-sm-8">
-                                        <select class="form-select" id="sala" name="sala" aria-label="Default select example">
-                                            <option selected>-- Elige una sala --</option>
+                                        <select class="form-select" id="sala" name="sala"
+                                                aria-label="Default select example">
+                                            <option selected disabled>-- Elige una sala --</option>
                                             <option value="1">Sala 1</option>
                                             <option value="2">Sala 2</option>
                                             <option value="3">Sala 3</option>
@@ -521,27 +518,35 @@
                                 <div class="mb-3 row">
                                     <label for="fecha" class="col-sm-4 col-form-label">Fecha y hora</label>
                                     <div class="col-sm-8">
-                                        <input type="datetime-local" class="form-control" id="fecha" name="fecha">
-                                    </div>
-                                </div>
-                                <div class="mb-2 row">
-                                    <label for="costo" class="col-sm-4 col-form-label">Costo por ticket</label>
-                                    <div class="col-sm-8">
-                                        <div class="input-group mb-3">
-                                            <span class="input-group-text">S/.</span>
-                                            <input type="text" id="costo" name="costo" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
-                                        </div>
+                                        <input type="datetime-local" class="form-control"
+                                               id="fecha" name="fecha">
                                     </div>
                                 </div>
                                 <div class="mb-3 row">
-                                    <label for="aforo" class="col-sm-4 col-form-label">Aforo</label>
+                                    <label for="costo" class="col-sm-4 col-form-label">Costo por
+                                        ticket</label>
+                                    <div class="col-sm-8">
+                                        <div class="input-group">
+                                            <span class="input-group-text">S/.</span>
+                                            <input type="text" id="costo" name="costo"
+                                                   class="form-control"
+                                                   aria-label="Dollar amount (with dot and two decimal places)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3 row align-items-center">
+                                    <label for="aforo"
+                                           class="col-sm-4 col-form-label">Aforo</label>
                                     <div class="col-sm-4">
-                                        <input class="form-control" id="aforo" name="aforo"  type="number" min="1" max="50" value="50">
+                                        <input class="form-control" id="aforo" name="aforo"
+                                               type="number" min="1" max="50" value="50">
                                     </div>
                                     <span class="col-sm-4">Aforo máx: 50</span>
                                 </div>
                                 <div class="modal-footer justify-content-center">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancelar
+                                    </button>
                                     <button type="button" class="btn btn-primary">Crear</button>
                                 </div>
                             </form>
