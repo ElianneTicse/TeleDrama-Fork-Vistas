@@ -166,4 +166,14 @@ public class ClienteController {
         return "cliente/descargaQR";
     }
 
+    @GetMapping("detallesObra")
+    public String detallesObra(){
+        return "cliente/detallesObra";
+    }
+    @GetMapping("historial")
+    public String historialPedidos(){
+        return "cliente/historial";
+    }
+
+
 }
