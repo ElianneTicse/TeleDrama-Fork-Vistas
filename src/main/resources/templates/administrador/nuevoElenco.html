@@ -97,6 +97,28 @@
 
     <header th:replace="fragments/navbarGeneral.html :: navbarAdmi"></header>
 
+
+    <div id="banner-area" class="banner-area" th:style="'background-image:url('+@{/images/banner/banner1.jpg}+')'">
+        <div class="banner-text">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="banner-heading">
+                            <h1 class="banner-title">Nuevo Elenco</h1>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item active" aria-current="page">Actores </li>
+                                    <li class="breadcrumb-item active" aria-current="page">Directores </li>
+
+                                </ol>
+                            </nav>
+                        </div>
+                    </div><!-- Col end -->
+                </div><!-- Row end -->
+            </div><!-- Container end -->
+        </div><!-- Banner text end -->
+    </div><!-- Banner area end -->
+
     <section id="main-container" class="main-container">
         <div class="container">
             <div class="row">
@@ -106,6 +128,7 @@
                         <img class="image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="" />
                         <h3 class="username text-center">xxxx xxxx</h3>
                         <button type="button" class="btn btn-primary btn-block" data-bs-toggle="modal" data-bs-target="#ventanaModal">Agregar foto</button>
+                        <input class="form-control" type="file" id="formFile">
                     </div>
                 </div>
                 <div class="col-6">
