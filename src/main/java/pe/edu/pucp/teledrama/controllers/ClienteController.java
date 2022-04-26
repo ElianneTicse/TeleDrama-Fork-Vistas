@@ -37,6 +37,21 @@ public class ClienteController {
         return "/administrador/main";
     }
 
+    @GetMapping("/elenco")
+    public String homeElenco() {
+        return "/administrador/elenco";
+    }
+
+    @GetMapping("/teatro")
+    public String homeTeatro() {
+        return "/administrador/teatro";
+    }
+
+    @GetMapping("/teatroMaps")
+    public String homeTeatroMaps() {
+        return "/administrador/teatroMaps";
+    }
+
     @GetMapping("/aaaa")
     public String obras() {
         return "obras";

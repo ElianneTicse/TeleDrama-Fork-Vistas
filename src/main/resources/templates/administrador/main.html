@@ -1,127 +1,321 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" th:href="@{/static/css/styles.css}" type="text/css">
 
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8">
+    <title>Constra - Construction Html5 Template</title>
 
-    <link href="img/favicon.png" rel="shortcut icon">
-    <!-- PLUGINS CSS STYLE -->
-    <!-- <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet"> -->
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Construction Html5 Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+    <!-- Favicon
+  ================================================== -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- CSS
+  ================================================== -->
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap-slider.css">
-    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" th:href="@{plugins/bootstrap/bootstrap.min.css}">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" th:href="@{plugins/fontawesome/css/all.min.css}">
+    <!-- Animation -->
+    <link rel="stylesheet" th:href="@{plugins/animate-css/animate.css}">
+    <!-- slick Carousel -->
+    <link rel="stylesheet" th:href="@{plugins/slick/slick.css}">
+    <link rel="stylesheet" th:href="@{plugins/slick/slick-theme.css}">
+    <!-- Colorbox -->
+    <link rel="stylesheet" th:href="@{plugins/colorbox/colorbox.css}">
+    <!-- Template styles-->
+    <link rel="stylesheet" th:href="@{css/style.css}">
 
 </head>
 <body>
-<!--ESTO es el NAVBAR-->
-    <header>
+<div class="body-inner">
+
+    <div id="top-bar" class="top-bar">
         <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">TELEDRAMAS.</a>
-                <ul class="nav-list">
-                    <li>
-                        <a href="index.html" class="nav-link">Home</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">Dates</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">Testimonials</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-                <a href="#" id="nav-cta">Book now</a>
-            </nav>
-        </div>
-    </header>
-    <section class="hero"></section>
-    <section class="demo-content"></section>
-
-    <script>
-        window.addEventListener('scroll', function () {
-            let header = document.querySelector('header');
-            let windowPosition = window.scrollY > 0;
-            header.classList.toggle('scrolling-active', windowPosition);
-        })
-    </script>
-
-
-
-<!-- Container Start -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <!-- Header Contetnt -->
-            <div class="content-block">
-                <h1>Buy & Sell Near You </h1>
-                <p>Join the millions who buy and sell from each other <br> everyday in local communities around the world</p>
-                <div class="short-popular-category-list text-center">
-                    <h2>Popular Category</h2>
-                    <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a href="category.html"><i class="fa fa-bed"></i> Hotel</a></li>
-                        <li class="list-inline-item">
-                            <a href="category.html"><i class="fa fa-grav"></i> Fitness</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="category.html"><i class="fa fa-car"></i> Cars</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="category.html"><i class="fa fa-cutlery"></i> Restaurants</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="category.html"><i class="fa fa-coffee"></i> Cafe</a>
+            <div class="row">
+                <div class="col-lg-8 col-md-8">
+                    <ul class="top-info text-center text-md-left">
+                        <li><i class="fas fa-map-marker-alt"></i> <p class="info-text">9051 Constra Incorporate, USA</p>
                         </li>
                     </ul>
                 </div>
+                <!--/ Top info end -->
 
+                <div class="col-lg-4 col-md-4 top-social text-center text-md-right">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a title="Facebook" href="https://facebbok.com/themefisher.com">
+                                <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                            </a>
+                            <a title="Twitter" href="https://twitter.com/themefisher.com">
+                                <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                            </a>
+                            <a title="Instagram" href="https://instagram.com/themefisher.com">
+                                <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                            </a>
+                            <a title="Linkdin" href="https://github.com/themefisher.com">
+                                <span class="social-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/ Top social end -->
             </div>
-            <!-- Advance Search -->
-            <div class="advance-search">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12 col-md-12 align-content-center">
-                            <form>
-                                <div class="form-row">
-                                    <div class="form-group col-md-4">
-                                        <input type="text" class="form-control my-2 my-lg-1" id="inputtext4" placeholder="What are you looking for">
+            <!--/ Content row end -->
+        </div>
+        <!--/ Container end -->
+    </div>
+    <!--/ Topbar end -->
+    <!-- Header start -->
+    <header id="header" class="header-one">
+        <div class="bg-white">
+            <div class="container">
+                <div class="logo-area">
+                    <div class="row align-items-center">
+                        <div class="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                            <a class="d-block" href="index.html">
+                                <img loading="lazy" src="images/logo.png" alt="Constra">
+                            </a>
+                        </div><!-- logo end -->
+
+                        <div class="col-lg-9 header-right">
+                            <ul class="top-info-box">
+                                <li>
+                                    <div class="info-box">
+                                        <div class="info-box-content">
+                                            <p class="info-box-title">Call Us</p>
+                                            <p class="info-box-subtitle"><a href="tel:(+9) 847-291-4353">(+9) 847-291-4353</a></p>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-3">
-                                        <select class="w-100 form-control mt-lg-1 mt-md-2">
-                                            <option>Category</option>
-                                            <option value="1">Top rated</option>
-                                            <option value="2">Lowest Price</option>
-                                            <option value="4">Highest Price</option>
-                                        </select>
+                                </li>
+                                <li>
+                                    <div class="info-box">
+                                        <div class="info-box-content">
+                                            <p class="info-box-title">Email Us</p>
+                                            <p class="info-box-subtitle"><a href="mailto:office@Constra.com">office@Constra.com</a></p>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-3">
-                                        <input type="text" class="form-control my-2 my-lg-1" id="inputLocation4" placeholder="Location">
+                                </li>
+                                <li class="last">
+                                    <div class="info-box last">
+                                        <div class="info-box-content">
+                                            <p class="info-box-title">Global Certificate</p>
+                                            <p class="info-box-subtitle">ISO 9001:2017</p>
+                                        </div>
                                     </div>
-                                    <div class="form-group col-md-2 align-self-center">
-                                        <button type="submit" class="btn btn-primary">Search Now</button>
-                                    </div>
-                                </div>
-                            </form>
+                                </li>
+                                <li class="header-get-a-quote">
+                                    <a class="btn btn-primary" href="contact.html">Get A Quote</a>
+                                </li>
+                            </ul><!-- Ul end -->
+                        </div><!-- header right end -->
+                    </div><!-- logo area end -->
+
+                </div><!-- Row end -->
+            </div><!-- Container end -->
+        </div>
+
+        <div class="site-navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div id="navbar-collapse" class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav mr-auto">
+                                    <li class="nav-item dropdown active">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Home <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li class="active"><a href="index.html">Home One</a></li>
+                                            <li><a href="index-2.html">Home Two</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Company <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="team.html">Our People</a></li>
+                                            <li><a href="testimonials.html">Testimonials</a></li>
+                                            <li><a href="faq.html">Faq</a></li>
+                                            <li><a href="pricing.html">Pricing</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="projects.html">Projects All</a></li>
+                                            <li><a href="projects-single.html">Projects Single</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Services <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="services.html">Services All</a></li>
+                                            <li><a href="service-single.html">Services Single</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Features <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="typography.html">Typography</a></li>
+                                            <li><a href="404.html">404</a></li>
+                                            <li class="dropdown-submenu">
+                                                <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Parent Menu</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#!">Child Menu 1</a></li>
+                                                    <li><a href="#!">Child Menu 2</a></li>
+                                                    <li><a href="#!">Child Menu 3</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">News <i class="fa fa-angle-down"></i></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
+                                            <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
+                                            <li><a href="news-single.html">News Single</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <!--/ Col end -->
+                </div>
+                <!--/ Row end -->
+
+                <div class="nav-search">
+                    <span id="search"><i class="fa fa-search"></i></span>
+                </div><!-- Search end -->
+
+                <div class="search-block" style="display: none;">
+                    <label for="search-field" class="w-100 mb-0">
+                        <input type="text" class="form-control" id="search-field" placeholder="Type what you want and enter">
+                    </label>
+                    <span class="search-close">&times;</span>
+                </div><!-- Site search end -->
+            </div>
+            <!--/ Container end -->
+
+        </div>
+        <!--/ Navigation end -->
+    </header>
+    <!--/ Header end -->
+
+    <div class="banner-carousel banner-carousel-1 mb-0">
+        <div class="banner-carousel-item" style="background-image:url(static/images/slider-main/bg1.jpg)">
+            <div class="slider-content">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-12 text-center">
+                            <h2 class="slide-title" data-animation-in="slideInLeft">17 Years of excellence in</h2>
+                            <h3 class="slide-sub-title" data-animation-in="slideInRight">Construction Industry</h3>
+                            <p data-animation-in="slideInLeft" data-duration-in="1.2">
+                                <a href="services.html" class="slider btn btn-primary">Our Services</a>
+                                <a href="contact.html" class="slider btn btn-primary border">Contact Now</a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="banner-carousel-item" style="background-image:url(static/images/slider-main/bg2.jpg)">
+            <div class="slider-content text-left">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-12">
+                            <h2 class="slide-title-box" data-animation-in="slideInDown">World Class Service</h2>
+                            <h3 class="slide-title" data-animation-in="fadeIn">When Service Matters</h3>
+                            <h3 class="slide-sub-title" data-animation-in="slideInLeft">Your Choice is Simple</h3>
+                            <p data-animation-in="slideInRight">
+                                <a href="services.html" class="slider btn btn-primary border">Our Services</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="banner-carousel-item" style="background-image:url(static/images/slider-main/bg3.jpg)">
+            <div class="slider-content text-right">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-12">
+                            <h2 class="slide-title" data-animation-in="slideInDown">Meet Our Engineers</h2>
+                            <h3 class="slide-sub-title" data-animation-in="fadeIn">We believe sustainability</h3>
+                            <p class="slider-description lead" data-animation-in="slideInRight">We will deal with your failure that determines how you achieve success.</p>
+                            <div data-animation-in="slideInLeft">
+                                <a href="contact.html" class="slider btn btn-primary" aria-label="contact-with-us">Get Free Quote</a>
+                                <a href="about.html" class="slider btn btn-primary border" aria-label="learn-more-about-us">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-<!-- Container End -->
 
+
+
+
+
+
+
+
+
+
+    <!--/ subscribe end -->
+
+
+    <!--/ News end -->
+
+
+
+
+    <!-- Javascript Files
+    ================================================== -->
+
+    <!-- initialize jQuery Library -->
+    <script th:src="@{plugins/jQuery/jquery.min.js}"></script>
+    <!-- Bootstrap jQuery -->
+    <script th:src="@{plugins/bootstrap/bootstrap.min.js}" defer></script>
+    <!-- Slick Carousel -->
+    <script th:src="@{plugins/slick/slick.min.js}"></script>
+    <script th:src="@{plugins/slick/slick-animation.min.js}"></script>
+    <!-- Color box -->
+    <script th:src="@{plugins/colorbox/jquery.colorbox.js}"></script>
+    <!-- shuffle -->
+    <script th:src="@{plugins/shuffle/shuffle.min.js}" defer></script>
+
+
+    <!-- Google Map API Key-->
+    <script th:src="@{https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU}" defer></script>
+    <!-- Google Map Plugin-->
+    <script th:src="@{plugins/google-map/map.js}" defer></script>
+
+    <!-- Template custom -->
+    <script th:src="@{js/script.js}"></script>
+
+</div><!-- Body inner end -->
 </body>
+
 </html>
