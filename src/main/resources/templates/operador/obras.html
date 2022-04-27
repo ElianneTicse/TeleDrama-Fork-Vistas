@@ -104,14 +104,20 @@
                                 </select>
                             </div>
                             <div class="col-md-3 col-12">
-                                <select id="estadoFuncion" class="form-select">
-                                    <option selected disabled>Seleccione el estado</option>
-                                    <option>Funciones Vigentes</option>
-                                    <option>Funciones Pasadas</option>
-                                </select>
+<!--                                <select id="estadoFuncion" class="form-select">-->
+<!--                                    <option selected disabled>Seleccione el estado</option>-->
+<!--                                    <option>Funciones Vigentes</option>-->
+<!--                                    <option>Funciones Pasadas</option>-->
+<!--                                </select>-->
                             </div>
                             <div class="col-md-3 col-12">
-                                <input type="datetime-local" class="form-control bg-white">
+                                <div class="input-group">
+                                    <input type="search" class="form-control bg-white" placeholder="Nombre... "
+                                           aria-label="Search" aria-describedby="search-addon"/>
+                                    <span class="input-group-text border-0" id="search-addon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -23,4 +23,6 @@ public class OperadorController {
         return "operador/teatros";
     }
 
+
+
 }

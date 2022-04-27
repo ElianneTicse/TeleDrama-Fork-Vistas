@@ -31,16 +31,28 @@
 
                 <!--Icono busqueda-->
                 <div class="nav-search">
-                    <span id="search"><i class="fa fa-search"></i></span>
+                    <span id="search"><i class="bi bi-person-circle"></i></span>
                 </div>
 
                 <div class="search-block" style="display: none;">
-                    <label for="search-field" class="w-100 mb-0">
-                        <input type="text" class="form-control" id="search-field"
-                               placeholder="Type what you want and enter">
-                    </label>
+                    <div class="card text-center">
+
+                        <div class="card-body ">
+                            <h6>
+                                Diana Sologuren
+                            </h6>
+                            <p>
+                                diana@teledrama.pe
+                            </p>
+                            <a class="btn btn-warning" th:href="@{login}">
+                                Cerrar sesión
+                            </a>
+                        </div>
+
+                    </div>
                     <span class="search-close">&times;</span>
                 </div>
+
             </div>
         </div>
     </header>
@@ -180,8 +192,6 @@
             </div>
         </div>
     </header>
-
-
 
 
 </html>
