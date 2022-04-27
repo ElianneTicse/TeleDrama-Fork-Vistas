@@ -167,7 +167,10 @@ public class ClienteController {
     public String editarOperador() {
         return "/administrador/editarOperador";
     }
-
+    @GetMapping("teatroM")
+    public String maps() {
+        return "operador/teatroMapsOp";
+    }
 
 
 
